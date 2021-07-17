@@ -7,12 +7,43 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import MuiDrawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import { mainListItems, secondaryListItems } from './listItems';
 
 const drawerWidth: number = 244;
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
+
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) => ({
+    '& .MuiDrawer-paper': {
+      position: 'relative',
+      whiteSpace: 'nowrap',
+      width: drawerWidth,
+      transition: theme.transitions.create('width', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      boxSizing: 'border-box',
+      ...(!open && {
+        overflowX: 'hidden',
+        transition: theme.transitions.create('width', {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
+        width: theme.spacing(7),
+        [theme.breakpoints.up('sm')]: {
+          width: theme.spacing(9),
+        },
+      }),
+    },
+  }),
+);
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -32,7 +63,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-export default function Navbar() {
+export default function Layout() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -40,7 +71,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* AppBar component */}
+      {/* Navbar */}
       <AppBar position='absolute' open={open}>
         <Toolbar sx={{ pr: '24px' }}>
           <IconButton edge='start' color='inherit' aria-label='open drawer' onClick={toggleDrawer} sx={{ marginRight: '36px', ...(open && { display: 'none' }) }}>
@@ -56,6 +87,19 @@ export default function Navbar() {
           </IconButton>
         </Toolbar>
       </AppBar>
+
+      {/* Sidebar */}
+      <Drawer variant='permanent' open={open}>
+        <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', px: [1], }}>
+          <IconButton onClick={toggleDrawer}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </Toolbar>
+        <Divider />
+        <List>{mainListItems}</List>
+        <Divider />
+        <List>{secondaryListItems}</List>
+      </Drawer>
     </>
   );
 }
