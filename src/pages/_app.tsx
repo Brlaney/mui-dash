@@ -1,5 +1,5 @@
 import * as React from 'react'
-import type { AppProps /*, AppContext */ } from 'next/app'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from '@material-ui/core/styles'
