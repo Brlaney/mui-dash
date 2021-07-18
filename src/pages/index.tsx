@@ -16,13 +16,13 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-
 import { mainListItems, secondaryListItems } from '../components/listItems';
 import Chart from '../components/Chart';
 import Deposits from '../components/Deposits';
 import Orders from '../components/Orders';
 import Copyright from '../components/Copyright';
 
+// A constant value thats 'type' is a number
 const drawerWidth: number = 244;
 
 interface AppBarProps extends MuiAppBarProps {
