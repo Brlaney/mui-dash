@@ -9,6 +9,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import Link from 'next/link'
 
 export const mainListItems = (
   <div>
@@ -16,55 +17,73 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <Link href='/'>
+        <ListItemText primary='Dashboard' />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <Link href='/orders'>
+        <ListItemText primary='Orders' />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <Link href='/customers'>
+        <ListItemText primary='Customers' />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <Link href='/reports'>
+        <ListItemText primary='Reports' />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <Link href='/integrations'>
+        <ListItemText primary='Integrations' />
+      </Link>
     </ListItem>
   </div>
 );
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
+    <Link href='/reports'>
+      <ListSubheader inset>Reports</ListSubheader>
+    </Link>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <Link href='/current'>
+        <ListItemText primary='Current month' />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+      <Link href='/last-quarter'>
+        <ListItemText primary='Last quarter' />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
+      <Link href='/year-end'>
+        <ListItemText primary='Year-end sale' />
+      </Link>
     </ListItem>
   </div>
 );
