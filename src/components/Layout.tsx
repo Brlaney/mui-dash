@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useRouter } from 'next/router';
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -68,6 +69,14 @@ export default function Layout() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
+  let router = useRouter();
+
+  let greeting =
+    router.locale === 'en-US'
+    ? 'Hello world!'
+    : router.locale === 'es'
+    ? '¡Hola Mundo!'
+    : '';
 
   return (
     <>
@@ -78,7 +87,7 @@ export default function Layout() {
             <MenuIcon />
           </IconButton>
           <Typography component='h1' variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
-            Dashboard
+            Dashboard - {greeting}
           </Typography>
           <IconButton color='inherit'>
             <Badge overlap='circular' variant='dot' color='secondary' sx={{ color: 'white' }}>

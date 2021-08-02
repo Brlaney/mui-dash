@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+
 import Chart from '../components/Chart';
 import Deposits from '../components/Deposits';
 import Orders from '../components/Orders';
@@ -20,7 +21,9 @@ function DashboardContent() {
       <Box
         component='main'
         sx={{
-          backgroundColor: (theme) => theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
+          backgroundColor: (theme) => theme.palette.mode === 'light'
+            ? theme.palette.grey[100]
+            : theme.palette.grey[900],
           flexGrow: 1,
           height: '100vh',
           overflow: 'auto',
