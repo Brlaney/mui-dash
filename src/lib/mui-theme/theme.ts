@@ -1,7 +1,4 @@
-import {
-  createTheme,
-  responsiveFontSizes
-} from '@material-ui/core/styles'
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
 const font = "'Lato', sans-serif"
 
@@ -32,31 +29,31 @@ let theme = createTheme({
   typography: {
     fontFamily: font,
     h1: {
-      fontSize: 74
+      fontSize: 69
     },
     h2: {
-      fontSize: 62
+      fontSize: 57
     },
     h3: {
-      fontSize: 50
+      fontSize: 48
     },
     h4: {
-      fontSize: 42
+      fontSize: 40
     },
     h5: {
-      fontSize: 32
+      fontSize: 33
     },
     h6: {
-      fontSize: 24
+      fontSize: 28
     },
     subtitle1: {
-      fontSize: 22
+      fontSize: 23
     },
     subtitle2: {
-      fontSize: 20
+      fontSize: 19
     },
     body1: {
-      fontSize: 18
+      fontSize: 19
     },
     body2: {
       fontSize: 16

@@ -11,9 +11,9 @@ import '@/styles/globals.scss'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
-const title = 'NextJs | Material-dashboard'
-const keywords = 'Keywords for seo'
-const description = 'Describe what this site does/provides'
+const title = 'Next | TS | Mui'
+const keywords = 'Next.js, next, Typescript, Material-UI, Sass, Scss, web app'
+const description = 'This web application uses Next.js, Typescript, and Material-UI'
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
