@@ -5,11 +5,11 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-import Chart from '../components/Chart';
-import Deposits from '../components/Deposits';
-import Orders from '../components/Orders';
-import Copyright from '../components/Copyright';
-import Layout from '../components/Layout';
+import Chart from '@/components/Chart';
+import Deposits from '@/components/Deposits';
+import Orders from '@/components/Orders';
+import Copyright from '@/components/Copyright';
+import Layout from '@/components/Layout';
 
 function DashboardContent() {
   return (
