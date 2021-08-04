@@ -12,7 +12,7 @@ import MuiDrawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems, secondaryListItems } from './en/listItems';
 
 const drawerWidth: number = 244;
 
@@ -71,12 +71,16 @@ export default function Layout() {
   };
   let router = useRouter();
 
-  let greeting =
+  let message =
     router.locale === 'en-US'
-    ? 'Hello world!'
+    ? 'Welcome, to your dashboard'
     : router.locale === 'es'
-    ? '¡Hola Mundo!'
-    : '';
+    ? 'Bienvenido, a tu tablero.'
+    : router.locale === 'fr'
+    ? 'Bienvenue à votre conseil.'
+    : router.locale === 'hi'
+    ? 'आपकी सलाह में आपका स्वागत है।'
+    : ''
 
   return (
     <>
@@ -87,7 +91,7 @@ export default function Layout() {
             <MenuIcon />
           </IconButton>
           <Typography component='h1' variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
-            Dashboard - {greeting}
+            {message}
           </Typography>
           <IconButton color='inherit'>
             <Badge overlap='circular' variant='dot' color='secondary' sx={{ color: 'white' }}>

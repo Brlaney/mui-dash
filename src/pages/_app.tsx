@@ -1,17 +1,17 @@
-import * as React from 'react'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { CacheProvider } from '@emotion/react'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import createCache from '@emotion/cache'
-import theme from '@/lib/mui-theme/theme'
-import '@/styles/globals.scss'
+import * as React from 'react';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { CacheProvider } from '@emotion/react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import createCache from '@emotion/cache';
+import theme from '@/lib/mui-theme/theme';
+import '@/styles/globals.scss';
 
 export const cache = createCache({ key: 'css', prepend: true })
 
-const title = 'Next | TS | Mui'
+const title = 'Mui-Dash'
 const keywords = 'Next.js, next, Typescript, Material-UI, Sass, Scss, web app'
 const description = 'This web application uses Next.js, Typescript, and Material-UI'
 

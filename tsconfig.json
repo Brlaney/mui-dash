@@ -5,8 +5,7 @@
       "@/styles/*": ["./src/scss/*"],
       "@/components/*": ["./src/components/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/en/*": ["./src/lib/data/en/*"],
-      "@/es/*": ["./src/lib/data/es/*"],
+      "@/orders/*": ["src/lib/data/orders/*"],
     },
     "lib": [
       "dom",
