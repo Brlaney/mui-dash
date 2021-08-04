@@ -7,7 +7,8 @@ export const orders = [{
     state: 'TN',
     card: '5952',
     company: 'mastercard',
-    cost: '$584.39'
+    cost: '$584.39',
+    status: 'active'
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ export const orders = [{
     state: 'TN',
     card: '9399',
     company: 'mastercard',
-    cost: '$1677.10'
+    cost: '$1677.10',
+    status: 'active'
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ export const orders = [{
     state: 'TN',
     card: '4951',
     company: 'mastercard',
-    cost: '$4287.17'
+    cost: '$4287.17',
+    status: 'active'
   },
   {
     id: 4,
@@ -40,7 +43,8 @@ export const orders = [{
     state: 'TN',
     card: '3718',
     company: 'mastercard',
-    cost: '$1351.76'
+    cost: '$1351.76',
+    status: 'active'
   },
   {
     id: 5,
@@ -51,7 +55,8 @@ export const orders = [{
     state: 'TN',
     card: '6116',
     company: 'mastercard',
-    cost: '$1384.64'
+    cost: '$1384.64',
+    status: 'active'
   },
   {
     id: 6,
@@ -62,7 +67,8 @@ export const orders = [{
     state: 'TN',
     card: '5892',
     company: 'mastercard',
-    cost: '$1460.54'
+    cost: '$1460.54',
+    status: 'active'
   },
   {
     id: 7,
@@ -73,7 +79,8 @@ export const orders = [{
     state: 'TN',
     card: '4451',
     company: 'mastercard',
-    cost: '$752.79'
+    cost: '$752.79',
+    status: 'archived'
   },
   {
     id: 8,
@@ -84,7 +91,8 @@ export const orders = [{
     state: 'TN',
     card: '9483',
     company: 'mastercard',
-    cost: '$1025.37'
+    cost: '$1025.37',
+    status: 'archived'
   },
   {
     id: 9,
@@ -95,7 +103,8 @@ export const orders = [{
     state: 'TN',
     card: '7696',
     company: 'mastercard',
-    cost: '$2120.30'
+    cost: '$2120.30',
+    status: 'archived'
   },
   {
     id: 10,
@@ -106,7 +115,8 @@ export const orders = [{
     state: 'TN',
     card: '0706',
     company: 'mastercard',
-    cost: '$1946.74'
+    cost: '$1946.74',
+    status: 'archived'
   },
   {
     id: 11,
@@ -117,7 +127,8 @@ export const orders = [{
     state: 'TN',
     card: '2437',
     company: 'mastercard',
-    cost: '$2707.03'
+    cost: '$2707.03',
+    status: 'archived'
   },
   {
     id: 12,
@@ -128,7 +139,8 @@ export const orders = [{
     state: 'TN',
     card: '8368',
     company: 'mastercard',
-    cost: '$4462.34'
+    cost: '$4462.34',
+    status: 'archived'
   },
   {
     id: 13,
@@ -139,7 +151,8 @@ export const orders = [{
     state: 'TN',
     card: '3746',
     company: 'mastercard',
-    cost: '$2139.33'
+    cost: '$2139.33',
+    status: 'archived'
   },
   {
     id: 14,
@@ -150,7 +163,8 @@ export const orders = [{
     state: 'TN',
     card: '9273',
     company: 'mastercard',
-    cost: '$4149.42'
+    cost: '$4149.42',
+    status: 'archived'
   },
   {
     id: 15,
@@ -161,7 +175,8 @@ export const orders = [{
     state: 'TN',
     card: '0184',
     company: 'mastercard',
-    cost: '$687.02'
+    cost: '$687.02',
+    status: 'archived'
   },
   {
     id: 16,
@@ -172,7 +187,8 @@ export const orders = [{
     state: 'TN',
     card: '9513',
     company: 'mastercard',
-    cost: '$1837.07'
+    cost: '$1837.07',
+    status: 'archived'
   },
   {
     id: 17,
@@ -183,7 +199,8 @@ export const orders = [{
     state: 'TN',
     card: '6601',
     company: 'mastercard',
-    cost: '$3775.05'
+    cost: '$3775.05',
+    status: 'archived'
   },
   {
     id: 18,
@@ -194,7 +211,8 @@ export const orders = [{
     state: 'TN',
     card: '7341',
     company: 'mastercard',
-    cost: '$1779.11'
+    cost: '$1779.11',
+    status: 'archived'
   },
   {
     id: 19,
@@ -205,7 +223,8 @@ export const orders = [{
     state: 'TN',
     card: '4523',
     company: 'mastercard',
-    cost: '$1406.94'
+    cost: '$1406.94',
+    status: 'archived'
   },
   {
     id: 20,
@@ -216,7 +235,8 @@ export const orders = [{
     state: 'TN',
     card: '8780',
     company: 'mastercard',
-    cost: '$2004.24'
+    cost: '$2004.24',
+    status: 'archived'
   },
   {
     id: 21,
@@ -227,7 +247,8 @@ export const orders = [{
     state: 'TN',
     card: '5948',
     company: 'mastercard',
-    cost: '$3116.56'
+    cost: '$3116.56',
+    status: 'archived'
   },
   {
     id: 22,
@@ -238,7 +259,8 @@ export const orders = [{
     state: 'TN',
     card: '4539',
     company: 'mastercard',
-    cost: '$4225.01'
+    cost: '$4225.01',
+    status: 'archived'
   },
   {
     id: 23,
@@ -249,7 +271,8 @@ export const orders = [{
     state: 'TN',
     card: '2174',
     company: 'mastercard',
-    cost: '$1394.48'
+    cost: '$1394.48',
+    status: 'archived'
   },
   {
     id: 24,
@@ -260,7 +283,8 @@ export const orders = [{
     state: 'TN',
     card: '1399',
     company: 'mastercard',
-    cost: '$1337.41'
+    cost: '$1337.41',
+    status: 'archived'
   },
   {
     id: 25,
@@ -271,7 +295,8 @@ export const orders = [{
     state: 'TN',
     card: '9078',
     company: 'mastercard',
-    cost: '$3704.52'
+    cost: '$3704.52',
+    status: 'archived'
   },
   {
     id: 26,
@@ -282,7 +307,8 @@ export const orders = [{
     state: 'TN',
     card: '9489',
     company: 'mastercard',
-    cost: '$4235.87'
+    cost: '$4235.87',
+    status: 'archived'
   },
   {
     id: 27,
@@ -293,7 +319,8 @@ export const orders = [{
     state: 'TN',
     card: '7817',
     company: 'mastercard',
-    cost: '$2291.47'
+    cost: '$2291.47',
+    status: 'archived'
   },
   {
     id: 28,
@@ -304,7 +331,8 @@ export const orders = [{
     state: 'TN',
     card: '7244',
     company: 'mastercard',
-    cost: '$2828.03'
+    cost: '$2828.03',
+    status: 'archived'
   },
   {
     id: 29,
@@ -315,7 +343,8 @@ export const orders = [{
     state: 'TN',
     card: '0513',
     company: 'mastercard',
-    cost: '$3247.05'
+    cost: '$3247.05',
+    status: 'archived'
   },
   {
     id: 30,
@@ -326,6 +355,7 @@ export const orders = [{
     state: 'TN',
     card: '6332',
     company: 'mastercard',
-    cost: '$2405.10'
+    cost: '$2405.10',
+    status: 'archived'
   }
 ]

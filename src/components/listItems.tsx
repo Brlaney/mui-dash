@@ -10,7 +10,8 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import Link from 'next/link'
-import { mainItems, bottomItems } from '@/en/sidebar';
+// import { mainItems, bottomItems } from '@/en/sidebar'; // English
+import { mainItems, bottomItems } from '@/es/sidebar'; // Spanish
 
 
 export const mainListItems = (
@@ -18,7 +19,7 @@ export const mainListItems = (
     {mainItems.map((item) => (
       <ListItem key={item.name} button>
         <ListItemIcon>
-          <{item.icon} />
+          <DashboardIcon />
         </ListItemIcon>
         <Link href={item.endpoint}>
           <ListItemText primary={item.name} />

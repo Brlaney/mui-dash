@@ -7,37 +7,43 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
-// Generate Order Data
-function createData(
-  id: number,
-  date: string,
-  name: string,
-  shipTo: string,
-  paymentMethod: string,
-  amount: number,
-) {
-  return { id, date, name, shipTo, paymentMethod, amount };
-}
+// import { mainItems, bottomItems } from '@/en/orders'; // English
+import { orders } from '@/es/orders'; // Spanish
 
-const rows = [
-  createData(0, '16 Mar, 2019', 'Elvis Presley', 'Tupelo, MS', 'VISA ⠀•••• 3719', 312.44, ),
-  createData(1, '16 Mar, 2019', 'Paul McCartney', 'London, UK', 'VISA ⠀•••• 2574', 866.99, ),
-  createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-  createData(3, '16 Mar, 2019', 'Michael Jackson', 'Gary, IN', 'AMEX ⠀•••• 2000', 654.39, ),
-  createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79, ),
-];
+// Generate Order Data
+// const interface Order[] (
+//   id: number,
+//   date: string,
+//   first_name: string,
+//   last_name: string,
+//   city: string,
+//   state: string,
+//   card: string,
+//   company: string,
+//   cost: string,
+//   status: string,
+// ) 
+
+// const rows = [
+//   createData(0, '16 Mar, 2019', 'Elvis Presley', 'Tupelo, MS', 'VISA ⠀•••• 3719', 312.44, ),
+//   createData(1, '16 Mar, 2019', 'Paul McCartney', 'London, UK', 'VISA ⠀•••• 2574', 866.99, ),
+//   createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
+//   createData(3, '16 Mar, 2019', 'Michael Jackson', 'Gary, IN', 'AMEX ⠀•••• 2000', 654.39, ),
+//   createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79, ),
+// ];
 
 function preventDefault(event: React.MouseEvent) {
   event.preventDefault();
 }
 
-export default function Orders() {
+export default function Orders({ orders }) {
   return (
     <React.Fragment>
       <Title>Recent Orders</Title>
       <Table size='small'>
         <TableHead>
           <TableRow>
+            <TableCell>Status</TableCell>
             <TableCell>Date</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Ship To</TableCell>
@@ -46,13 +52,14 @@ export default function Orders() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align='right'>{`$${row.amount}`}</TableCell>
+          {orders.map((order: any) => (
+            <TableRow key={order.id}>
+              <TableCell>{order.status}</TableCell>
+              <TableCell>{order.date}</TableCell>
+              <TableCell>{order.name}</TableCell>
+              <TableCell>{order.shipTo}</TableCell>
+              <TableCell>{order.paymentMethod}</TableCell>
+              <TableCell align='right'>{`$${order.amount}`}</TableCell>
             </TableRow>
           ))}
         </TableBody>
