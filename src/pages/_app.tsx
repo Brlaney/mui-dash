@@ -8,17 +8,24 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
 import theme from '@/lib/mui-theme/theme';
 import '@/styles/globals.scss';
-
+import { title, keywords, description } from '@/lib/data/seo'
 export const cache = createCache({ key: 'css', prepend: true })
-
-const title = 'Mui-Dash'
-const keywords = 'Next.js, next, Typescript, Material-UI, Sass, Scss, web app'
-const description = 'This web application uses Next.js, Typescript, and Material-UI'
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
-  const router = useRouter()
+  let router = useRouter()
 
+  // let check =
+  //   router.locale === 'en-US'
+  //   ? 'en'
+  //   : router.locale === 'es'
+  //   ? 'es'
+  //   : router.locale === 'fr'
+  //   ? 'fr'
+  //   : router.locale === 'hi'
+  //   ? 'hi'
+  //   : ''
+  
   return (
     <CacheProvider value={cache}>
       <Head>

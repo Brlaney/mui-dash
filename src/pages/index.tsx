@@ -4,7 +4,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-
 import Layout from '@/components/Layout';
 
 import Chart from '@/components/en/Chart';
