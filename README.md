@@ -31,6 +31,10 @@
   - French (fr)
   - Hindi (hi)
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample [site here](https://next.material-ui.com/getting-started/templates/dashboard/)
+  
+![english](https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png)
+
+![spanish](https://user-images.githubusercontent.com/64326462/128269274-f3da4133-e84c-495a-809a-b76042fd9fb9.png)
 
 # Quick Start
 

@@ -6,7 +6,7 @@ import Title from '../Title';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'date', headerName: 'Fecha', width: 125 },
+  { field: 'date', headerName: 'Fecha', width: 145 },
   {
     field: 'Name',
     headerName: 'Último nombre',
@@ -19,7 +19,7 @@ const columns: GridColDef[] = [
     field: 'Location',
     headerName: 'Localización',
     sortable: false,
-    width: 140,
+    width: 175,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'city') || ''} , ${params.getValue(params.id, 'state') || ''}`,
   },
@@ -31,7 +31,7 @@ const columns: GridColDef[] = [
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'company') || ''} •••• ${params.getValue(params.id, 'card') || ''}`,
   },
-  { field: 'cost', headerName: 'Costo', width: 125 },
+  { field: 'cost', headerName: 'Costo', width: 145 },
 ];
 
 

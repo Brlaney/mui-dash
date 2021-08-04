@@ -9,7 +9,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '5952',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$584.39'
   },
   {
@@ -20,7 +20,7 @@ export const orders: IOrder[] = [
     city: 'kingsport',
     state: 'Tennesse',
     card: '9399',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1677.10'
   },
   {
@@ -31,7 +31,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '4951',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$4287.17'
   },
   {
@@ -42,7 +42,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '3718',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1351.76'
   },
   {
@@ -53,7 +53,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '6116',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1384.64'
   },
   {
@@ -64,7 +64,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '5892',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1460.54'
   },
   {
@@ -75,7 +75,7 @@ export const orders: IOrder[] = [
     city: 'murfreesboro',
     state: 'Tennesse',
     card: '4451',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$752.79'
   },
   {
@@ -86,7 +86,7 @@ export const orders: IOrder[] = [
     city: 'chattanooga',
     state: 'Tennesse',
     card: '9483',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1025.37'
   },
   {
@@ -97,7 +97,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '7696',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2120.30'
   },
   {
@@ -108,7 +108,7 @@ export const orders: IOrder[] = [
     city: 'chattanooga',
     state: 'Tennesse',
     card: '0706',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1946.74'
   },
   {
@@ -119,7 +119,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '2437',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2707.03'
   },
   {
@@ -130,7 +130,7 @@ export const orders: IOrder[] = [
     city: 'johnson City',
     state: 'Tennesse',
     card: '8368',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$4462.34'
   },
   {
@@ -141,7 +141,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '3746',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2139.33'
   },
   {
@@ -152,7 +152,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '9273',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$4149.42'
   },
   {
@@ -163,7 +163,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '0184',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$687.02'
   },
   {
@@ -174,7 +174,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '9513',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1837.07'
   },
   {
@@ -185,7 +185,7 @@ export const orders: IOrder[] = [
     city: 'chattanooga',
     state: 'Tennesse',
     card: '6601',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$3775.05'
   },
   {
@@ -196,7 +196,7 @@ export const orders: IOrder[] = [
     city: 'jackson',
     state: 'Tennesse',
     card: '7341',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1779.11'
   },
   {
@@ -207,7 +207,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '4523',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1406.94'
   },
   {
@@ -218,7 +218,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '8780',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2004.24'
   },
   {
@@ -229,7 +229,7 @@ export const orders: IOrder[] = [
     city: 'nashville',
     state: 'Tennesse',
     card: '5948',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$3116.56'
   },
   {
@@ -240,7 +240,7 @@ export const orders: IOrder[] = [
     city: 'knoxville',
     state: 'Tennesse',
     card: '4539',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$4225.01'
   },
   {
@@ -251,7 +251,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '2174',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1394.48'
   },
   {
@@ -262,7 +262,7 @@ export const orders: IOrder[] = [
     city: 'knoxville',
     state: 'Tennesse',
     card: '1399',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$1337.41'
   },
   {
@@ -273,7 +273,7 @@ export const orders: IOrder[] = [
     city: 'jackson',
     state: 'Tennesse',
     card: '9078',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$3704.52'
   },
   {
@@ -284,7 +284,7 @@ export const orders: IOrder[] = [
     city: 'murfreesboro',
     state: 'Tennesse',
     card: '9489',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$4235.87'
   },
   {
@@ -295,7 +295,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '7817',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2291.47'
   },
   {
@@ -306,7 +306,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '7244',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2828.03'
   },
   {
@@ -317,7 +317,7 @@ export const orders: IOrder[] = [
     city: 'knoxville',
     state: 'Tennesse',
     card: '0513',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$3247.05'
   },
   {
@@ -328,7 +328,7 @@ export const orders: IOrder[] = [
     city: 'memphis',
     state: 'Tennesse',
     card: '6332',
-    company: 'tarjeta MasterCard',
+    company: 'tarjeta',
     cost: '$2405.10'
   }
 ]

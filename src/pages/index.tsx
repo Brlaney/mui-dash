@@ -6,10 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Layout from '@/components/Layout';
 
-import Chart from '@/components/en/Chart';
-import Deposits from '@/components/en/Deposits';
-import Orders from '@/components/en/Orders';
-import Copyright from '@/components/en/Copyright';
+import Chart from '@/components/es/Chart';
+import Deposits from '@/components/es/Deposits';
+import Orders from '@/components/es/Orders';
+import Copyright from '@/components/es/Copyright';
 
 function DashboardContent() {
   return (
