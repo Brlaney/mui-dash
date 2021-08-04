@@ -34,15 +34,20 @@
   
 </br>
   
-<table><tr>
-  <td><img src="https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png" alt="English" style="width: 250px;"/></td>
-  <td><img src="https://user-images.githubusercontent.com/64326462/128269274-f3da4133-e84c-495a-809a-b76042fd9fb9.png" alt="Espanol" style="width: 250px;"/></td>
-</tr></table>
-
-<table><tr>
-  <td><h4 align="center">English</h4></td>
-  <td><h4 align="center">Spanish</h4></td>
-</tr></table>
+<table>
+  <thead>
+    <tr>
+      <th>English</th>
+      <th>Spanish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png" alt="English" style="width: 250px;"/></td>
+      <td><img src="https://user-images.githubusercontent.com/64326462/128269274-f3da4133-e84c-495a-809a-b76042fd9fb9.png" alt="Espanol" style="width: 250px;"/></td>
+    </tr>
+  </tbody>
+</table>
 
 </br>
 
