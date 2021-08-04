@@ -24,7 +24,7 @@
 
 # Features
 
-- 🌎 Implements Next's built-in [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
+- 🌎 Implements Next's built-in [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing) for multi-language support.
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample [site here](https://next.material-ui.com/getting-started/templates/dashboard/)
 
 # Quick Start
@@ -74,6 +74,8 @@ Now navigate to http://localhost:3000/ and check it out.
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
 # License
+
+This repository was built on Material-UI's official [Dashboard](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) template. All of their templates can be found [here](https://next.material-ui.com/getting-started/templates/). I am not the original author of this code I have only added features and tweaked the structure of the application to better fit my needs.
 
 ```bash
 MIT License
