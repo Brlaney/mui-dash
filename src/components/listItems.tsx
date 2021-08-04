@@ -10,49 +10,21 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import Link from 'next/link'
+import { mainItems, bottomItems } from '@/en/sidebar';
+
 
 export const mainListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <Link href='/'>
-        <ListItemText primary='Dashboard' />
-      </Link>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <Link href='/orders'>
-        <ListItemText primary='Orders' />
-      </Link>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <Link href='/customers'>
-        <ListItemText primary='Customers' />
-      </Link>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <Link href='/reports'>
-        <ListItemText primary='Reports' />
-      </Link>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <Link href='/integrations'>
-        <ListItemText primary='Integrations' />
-      </Link>
-    </ListItem>
+    {mainItems.map((item) => (
+      <ListItem key={item.name} button>
+        <ListItemIcon>
+          <{item.icon} />
+        </ListItemIcon>
+        <Link href={item.endpoint}>
+          <ListItemText primary={item.name} />
+        </Link>
+      </ListItem>
+    ))}
   </div>
 );
 
@@ -61,29 +33,15 @@ export const secondaryListItems = (
     <Link href='/reports'>
       <ListSubheader inset>Reports</ListSubheader>
     </Link>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <Link href='/current'>
-        <ListItemText primary='Current month' />
-      </Link>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <Link href='/last-quarter'>
-        <ListItemText primary='Last quarter' />
-      </Link>
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <Link href='/year-end'>
-        <ListItemText primary='Year-end sale' />
-      </Link>
-    </ListItem>
+    {bottomItems.map((item) => (
+      <ListItem key={item.name} button>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
+        <Link href={item.endpoint}>
+          <ListItemText primary={item.name} />
+        </Link>
+      </ListItem>
+    ))}
   </div>
 );
