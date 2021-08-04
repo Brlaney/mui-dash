@@ -77,7 +77,7 @@ Now navigate to http://localhost:3000/ and check it out.
 
 This repository was built on Material-UI's official [Dashboard](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) template. All of their templates can be found [here](https://next.material-ui.com/getting-started/templates/). I am not the original author of this code I have only added features and tweaked the structure of the application to better fit my needs.
 
-```bash
+```
 MIT License
 
 Copyright (c) 2021
