@@ -3,7 +3,7 @@
     <a href="https://github.com/brlaney/mui-dash/commits/master">
       <img src="https://img.shields.io/github/last-commit/brlaney/mui-dash?style=flat-square">
     </a>
-    <a href="#status"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square"></a>
+    <a href="#status"><img src="https://img.shields.io/github/last-commit/brlaney/mui-dash?style=flat-square"></a>
   </p>
   <h1>Mui-dash</h1>
   <h5>A custom Material-UI Dashboard template</h5>
