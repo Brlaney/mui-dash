@@ -27,7 +27,7 @@
 - 🌎 Implements Next's built-in [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing) for multi-language support.
 - Currently supported locales include:
   - :en: English (en)
-  - :es: Spanish (es)
+  - :flag_spain: Spanish (es)
   - :fr: French (fr)
   - :hi: Hindi (hi)
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample [site here](https://next.material-ui.com/getting-started/templates/dashboard/)
