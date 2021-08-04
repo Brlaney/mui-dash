@@ -31,7 +31,7 @@ export default function MyApp(props: AppProps) {
       <Head>
         <meta charSet='utf-8' />
         <title>{title}</title>
-        <link rel='icon' href='/favicon.png' />
+        <link rel='icon' href='/favicon.ico' />
         <meta name='viewport' content='initial-scale=1 width=device-width' />
         <meta name='keywords' content={keywords} />
         <meta name='description' content={description} />
