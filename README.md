@@ -14,6 +14,7 @@
 
 - [Table Of Contents](#table-of-contents)
 - [Features](#features)
+- [Currently supported languages,  (locales)](#currently-supported-languages--locales)
 - [Quick Start](#quick-start)
     - [1. Clone repository](#1-clone-repository)
     - [2. Install dependencies](#2-install-dependencies)
@@ -33,6 +34,8 @@
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample [site here](https://next.material-ui.com/getting-started/templates/dashboard/)
   
 </br>
+
+# Currently supported languages,  (locales)
   
 <table>
   <thead><tr>
