@@ -14,7 +14,6 @@
 
 - [Table Of Contents](#table-of-contents)
 - [Features](#features)
-- [Currently supported languages,  (locales)](#currently-supported-languages--locales)
 - [Quick Start](#quick-start)
     - [1. Clone repository](#1-clone-repository)
     - [2. Install dependencies](#2-install-dependencies)
@@ -26,23 +25,20 @@
 # Features
 
 - 🌎 Implements Next's built-in [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing) for multi-language support.
-- Currently supported locales include:
-  - English (en)
-  - Spanish (es)
-  - French (fr)
-  - Hindi (hi)
+- Currently supported locales include (see figures below):
+  - English (en) - figure 1.
+  - Spanish (es) - figure 2.
+  - French (fr) - figure 3.
+  - Hindi (hi) - figure 4.
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample [site here](https://next.material-ui.com/getting-started/templates/dashboard/)
   
 </br>
 
-# Currently supported languages,  (locales)
-
-</br>
   
 <table>
   <thead><tr>
-    <th>English, en</th>
-    <th>Spanish, es</th>
+    <th>English, en - figure 1.</th>
+    <th>Spanish, es - figure 2.</th>
   </tr></thead>
   <tbody><tr>
     <td><img src="https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png" alt="English" style="width: 250px;"/></td>
@@ -52,8 +48,8 @@
     <td><img src="https://user-images.githubusercontent.com/64326462/128283628-64db2bd5-7bd3-41ca-8b85-9ef44445755b.PNG" alt="हिंदी" style="width: 250px;"/></td>
   </tr></tbody>
   <tr>
-    <th>French, fr</th>
-    <th>Hindi, hi</th>
+    <th>French, fr - figure 3.</th>
+    <th>Hindi, hi - figure 4.</th>
   </tr>
 </table>
 
