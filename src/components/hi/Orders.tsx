@@ -11,7 +11,7 @@ const columns: GridColDef[] = [
     field: 'Name',
     headerName: 'अंतिम पहला नाम',
     sortable: false,
-    width: 200,
+    width: 240,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'first_name') || ''} , ${params.getValue(params.id, 'last_name') || ''}`,
   },
@@ -19,7 +19,7 @@ const columns: GridColDef[] = [
     field: 'Location',
     headerName: 'स्थान',
     sortable: false,
-    width: 140,
+    width: 200,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'city') || ''} , ${params.getValue(params.id, 'state') || ''}`,
   },
@@ -31,7 +31,7 @@ const columns: GridColDef[] = [
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'company') || ''} •••• ${params.getValue(params.id, 'card') || ''}`,
   },
-  { field: 'cost', headerName: 'लागत', width: 125 },
+  { field: 'cost', headerName: 'लागत', width: 185 },
 ];
 
 

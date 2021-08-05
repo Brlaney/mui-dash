@@ -42,8 +42,16 @@
   <tbody><tr>
     <td><img src="https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png" alt="English" style="width: 250px;"/></td>
     <td><img src="https://user-images.githubusercontent.com/64326462/128269274-f3da4133-e84c-495a-809a-b76042fd9fb9.png" alt="Espanol" style="width: 250px;"/></td>
+  </tr><tr>
+    <td><img src="https://user-images.githubusercontent.com/64326462/128283625-d06acf30-761b-4454-8d2a-2dd7b2b4806c.PNG" alt="français" style="width: 250px;"/></td>
+    <td><img src="https://user-images.githubusercontent.com/64326462/128283628-64db2bd5-7bd3-41ca-8b85-9ef44445755b.PNG" alt="हिंदी" style="width: 250px;"/></td>
   </tr></tbody>
+  <tr>
+    <th>English</th>
+    <th>Spanish</th>
+  </tr>
 </table>
+
 
 </br>
 

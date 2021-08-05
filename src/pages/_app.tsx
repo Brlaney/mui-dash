@@ -31,7 +31,7 @@ export default function MyApp(props: AppProps) {
       <Head>
         <meta charSet='utf-8' />
         <title>{title}</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/mui-dash.svg' />
         <meta name='viewport' content='initial-scale=1 width=device-width' />
         <meta name='keywords' content={keywords} />
         <meta name='description' content={description} />

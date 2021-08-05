@@ -14,9 +14,9 @@ import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 // import { mainListItems, secondaryListItems } from './en/listItems'; // English
-import { mainListItems, secondaryListItems } from './es/listItems'; // Spanish
+// import { mainListItems, secondaryListItems } from './es/listItems'; // Spanish
 // import { mainListItems, secondaryListItems } from './fr/listItems'; // French
-// import { mainListItems, secondaryListItems } from './hi/listItems'; // Hindi
+import { mainListItems, secondaryListItems } from './hi/listItems'; // Hindi
 
 const drawerWidth: number = 244;
 

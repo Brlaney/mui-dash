@@ -6,9 +6,9 @@ import Link from '@material-ui/core/Link';
 export default function Copyright(props: any) {
   return (
     <Typography variant='body2' color='text.secondary' align='center' {...props}>
-      {'droits d'auteur © '}
+      {"droits d'auteur © "}
       <Link color='inherit' href='https://github.com/Brlaney/mui-dash'>
-        Mui-time
+        Mui-dash
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
