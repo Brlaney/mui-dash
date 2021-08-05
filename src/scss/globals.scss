@@ -31,3 +31,12 @@ a {
   background-color: $c-primary;
   outline: 1px solid slategrey;
 }
+
+.div {
+  #mainList {
+    background-color: $c-error;
+  }
+  #secondaryList {
+    background-color: $c-error;
+  }
+}

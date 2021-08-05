@@ -12,7 +12,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 
 export const mainListItems = (
-  <div>
+  <div className='mainList'>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
@@ -47,7 +47,7 @@ export const mainListItems = (
 );
 
 export const secondaryListItems = (
-  <div>
+  <div className='secondaryList'>
     <ListSubheader inset>सहेजी गई रिपोर्ट</ListSubheader>
     <ListItem button>
       <ListItemIcon>
