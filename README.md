@@ -36,6 +36,8 @@
 </br>
 
 # Currently supported languages,  (locales)
+
+</br>
   
 <table>
   <thead><tr>
