@@ -14,7 +14,6 @@ import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 // See step (3.) in the /pages/index.tsx comment block.
-
 import { mainListItems, secondaryListItems } from './en/listItems'; // English
 // import { mainListItems, secondaryListItems } from './es/listItems'; // Spanish
 // import { mainListItems, secondaryListItems } from './fr/listItems'; // French
