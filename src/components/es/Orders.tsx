@@ -38,7 +38,7 @@ const columns: GridColDef[] = [
 const Orders = () => {
   return (
     <React.Fragment>
-      <Title>Recent Orders</Title>
+      <Title>órdenes recientes</Title>
       <div style={{ height: 400, width: '100%', paddingBottom: '25px' }}>
         <DataGrid rows={ordersData} columns={columns} pageSize={5} checkboxSelection />
       </div>
