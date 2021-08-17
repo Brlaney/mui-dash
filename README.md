@@ -30,7 +30,7 @@
   - Spanish (es) - figure 2.
   - French (fr) - figure 3.
   - Hindi (hi) - figure 4.
-- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample [site here](https://next.material-ui.com/getting-started/templates/dashboard/)
+- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://next.material-ui.com/getting-started/templates/dashboard/).
   
 </br>
 
@@ -68,7 +68,7 @@ git clone https://github.com/Brlaney/mui-dash.git
 
 ### 2. Install dependencies
 
-```C
+```
 cd mui-dash
 
 # then for yarn users:
@@ -101,7 +101,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 # License
 
-This repository was built on Material-UI's official [Dashboard](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) template. All of their templates can be found [here](https://next.material-ui.com/getting-started/templates/). I am not the original author of this code I have only added features and tweaked the structure of the application to better fit my needs.
+This repository was built on Material-UI's official [Dashboard](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) template. All of their templates can be found [here](https://next.material-ui.com/getting-started/templates/). I am not the original author of the *template* this project was built on-top of. I have added features, re-structured components, and added my own code to the aforementioned template in order to better fit my needs.
 
 ```
 MIT License
