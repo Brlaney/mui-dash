@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 import * as React from 'react';
 import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -6,7 +8,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Layout from '@/components/Layout';
 
-/* Steps to change the locale (change between languages):
+/* 
+  Steps to change the locale (change between languages)
 
   1. Go to next.config.js and change the 'defaultLocale' property to your
   desired locale. Currently supported: ['en-US', 'es', 'fr', 'hi']
@@ -17,6 +20,39 @@ import Layout from '@/components/Layout';
   import in components/Layout.tsx and then test in development.
 
 */
+
+import en from '@/locales/en';
+import es from '@/locales/es';
+import fr from '@/locales/fr';
+import hi from '@/locales/hi';
+
+export default function IndexPage() {
+  const [showBanner, setBanner] = useState(true);
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : es
+    | 'es' ? es : fr
+    | 'fr' ? fr : hi
+    | 'hi' ? hi : null;
+  
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    router.push('/', '/', { locale });
+  };
+  
+  return (
+    <nav>
+      
+    </nav>
+  )
+}
+
+module.exports = {
+  i18n: {
+    locales: ['en', 'es', 'fr', 'hi'],
+    defaultLocale: 'en',
+  },
+};
 
 // English ~
 import Chart from '@/components/en/Chart';
