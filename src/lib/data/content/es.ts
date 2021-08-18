@@ -1,5 +1,10 @@
 export default {
-  title: 'Mui-tablero',
-  keywords: 'Siguiente.js, Siguiente, TypScript, Material-UI, SASS, SCSS, APP',
-  description: 'Esta aplicación web usa Siguiente.js, Typycript y Material-UI'
+  chartTitle: 'Hoy dia',
+  chartLabel: 'Ventas ($)',
+  copyright: 'Derechos de autor',
+  copyrightLink: 'Mui-tablero',
+  depositTitle: 'Depósitos recientes',
+  depositCost: '$3,024.00',
+  depositDate: 'El 15 de marzo de 2019.',
+  depositLink: 'Ver saldo',
 };

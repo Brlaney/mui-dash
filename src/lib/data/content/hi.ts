@@ -1,5 +1,10 @@
 export default {
-  title: 'मुई-डैश',
-  keywords: 'अगला। जेएस, अगला, टाइपस्क्रिप्ट, सामग्री-यूआई, एसएएसएस, एससीएसएस, वेब ऐप',
-  description: 'यह वेब एप्लिकेशन Next.js, टाइपस्क्रिप्ट, और सामग्री-यूआई का उपयोग करता है'
+  chartTitle: 'आज',
+  chartLabel: 'बिक्री ($)',
+  copyright: 'कॉपीराइट',
+  copyrightLink: 'मुई-डैश',
+  depositTitle: 'हालिया जमा',
+  depositCost: '$ 3,024.00',
+  depositDate: '15 मार्च, 2019 को',
+  depositLink: 'शेष राशि',
 };
