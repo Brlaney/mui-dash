@@ -17,7 +17,7 @@ export default function LanguageMenu() {
   };
 
   let title =
-    router.locale === 'en-US'
+    router.locale === 'en'
     ? 'Language'
     : router.locale === 'es'
     ? 'Idioma'

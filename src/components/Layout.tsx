@@ -1,30 +1,35 @@
-import * as React from 'react';
-import { useRouter } from 'next/router';
-import { experimentalStyled as styled } from '@material-ui/core/styles';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import MenuIcon from '@material-ui/icons/Menu';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MuiDrawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import * as React from 'react'
+import { useRouter } from 'next/router'
+import { experimentalStyled as styled } from '@material-ui/core/styles'
+import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import IconButton from '@material-ui/core/IconButton'
+import Badge from '@material-ui/core/Badge'
+import MuiDrawer from '@material-ui/core/Drawer'
+import List from '@material-ui/core/List'
+import Divider from '@material-ui/core/Divider'
+import MenuIcon from '@material-ui/icons/Menu'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
+import ListSubheader from '@material-ui/core/ListSubheader'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import DashboardIcon from '@material-ui/icons/Dashboard'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import NotificationsIcon from '@material-ui/icons/Notifications'
+import BarChartIcon from '@material-ui/icons/BarChart'
+import PeopleIcon from '@material-ui/icons/People'
+import LayersIcon from '@material-ui/icons/Layers'
+import AssignmentIcon from '@material-ui/icons/Assignment'
+import en from '@/lib/data/list-items/en'
+import es from '@/lib/data/list-items/es'
+import fr from '@/lib/data/list-items/fr'
+import hi from '@/lib/data/list-items/hi'
 
-// See step (3.) in the /pages/index.tsx comment block.
-import { mainListItems, secondaryListItems } from './en/listItems'; // English
-// import { mainListItems, secondaryListItems } from './es/listItems'; // Spanish
-// import { mainListItems, secondaryListItems } from './fr/listItems'; // French
-// import { mainListItems, secondaryListItems } from './hi/listItems'; // Hindi
+const drawerWidth: number = 244
 
-
-const drawerWidth: number = 244;
-
-interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-}
+interface AppBarProps extends MuiAppBarProps {open?: boolean}
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -50,7 +55,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
       }),
     },
   }),
-);
+)
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -68,39 +73,59 @@ const AppBar = styled(MuiAppBar, {
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
-}));
+}))
 
 export default function Layout() {
-  const [open, setOpen] = React.useState(true);
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
-  let router = useRouter();
+  const [open, setOpen] = React.useState(true)
+  const toggleDrawer = () => {setOpen(!open)}
+  const router = useRouter()
+  const { locale } = router
 
-  let message =
-    router.locale === 'en-US'
+  const message = locale === 'en'
     ? 'Welcome, to your dashboard'
-    : router.locale === 'es'
+    : locale === 'es'
     ? 'Bienvenido, a tu tablero.'
-    : router.locale === 'fr'
+    : locale === 'fr'
     ? 'Bienvenue à votre conseil.'
-    : router.locale === 'hi'
+    : locale === 'hi'
     ? 'आपकी सलाह में आपका स्वागत है।'
     : ''
+  
+  const t = locale === 'en'
+    ? en : es === es
+    ? es : fr === fr
+    ? fr : hi === hi
+    ? hi : en
 
   return (
     <>
       {/* Navbar */}
-      <AppBar position='absolute' open={open}>
+      <AppBar position='absolute' open={open} elevation={0}>
         <Toolbar sx={{ pr: '24px' }}>
-          <IconButton edge='start' color='inherit' aria-label='open drawer' onClick={toggleDrawer} sx={{ marginRight: '36px', ...(open && { display: 'none' }) }}>
+          <IconButton
+            edge='start'
+            color='inherit'
+            aria-label='open drawer'
+            onClick={toggleDrawer}
+            sx={{ marginRight: '36px', ...(open && { display: 'none' }) }}
+          >
             <MenuIcon />
           </IconButton>
-          <Typography component='h1' variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
+          <Typography
+            component='h1'
+            variant='h6'
+            color='inherit'
+            noWrap
+            sx={{ flexGrow: 1 }}
+          >
             {message}
           </Typography>
           <IconButton color='inherit'>
-            <Badge overlap='circular' variant='dot' color='secondary' sx={{ color: 'white' }}>
+            <Badge
+              overlap='circular'
+              variant='dot'
+              color='secondary'
+              sx={{ color: 'white' }}>
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -109,16 +134,81 @@ export default function Layout() {
 
       {/* Sidebar */}
       <Drawer variant='permanent' open={open}>
-        <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', px: [1], }}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            px: [1],
+          }}
+        >
           <IconButton onClick={toggleDrawer}>
             <ChevronLeftIcon />
           </IconButton>
         </Toolbar>
         <Divider />
-        <List>{mainListItems}</List>
+
+        {/* Main list items */}
+        <List>
+          <div>
+            <ListItem button>
+              <ListItemIcon>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.one} />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <ShoppingCartIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.two} />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <PeopleIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.three} />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.four} />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <LayersIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.five} />
+            </ListItem>
+          </div>
+        </List>
         <Divider />
-        <List>{secondaryListItems}</List>
+        {/* Secondary list items */}
+        <List>
+          <div>
+            <ListSubheader inset>Saved reports</ListSubheader>
+            <ListItem button>
+              <ListItemIcon>
+                <AssignmentIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.six} />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <AssignmentIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.seven} />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <AssignmentIcon />
+              </ListItemIcon>
+              <ListItemText primary={t.eight} />
+            </ListItem>
+          </div>
+        </List>
       </Drawer>
     </>
-  );
+  )
 }

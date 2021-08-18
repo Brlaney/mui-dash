@@ -1,82 +1,133 @@
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import * as React from 'react';
-import Box from '@material-ui/core/Box';
-import Toolbar from '@material-ui/core/Toolbar';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Layout from '@/components/Layout';
+// import { useState } from 'react'
+// import { useRouter } from 'next/router'
+import * as React from 'react'
+import Box from '@material-ui/core/Box'
+import Toolbar from '@material-ui/core/Toolbar'
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
+import Layout from '@/components/Layout'
+import Orders from '@/components/Orders'
 
-/* 
-  Steps to change the locale (change between languages)
+// DEPOSITS
+// import * as React from 'react';
+// import Link from '@material-ui/core/Link';
+// import Typography from '@material-ui/core/Typography';
+// import Title from './Title';
 
-  1. Go to next.config.js and change the 'defaultLocale' property to your
-  desired locale. Currently supported: ['en-US', 'es', 'fr', 'hi']
 
-  2. Comment/un-comment your desired locale components below.
+// function preventDefault(event: React.MouseEvent) {
+//   event.preventDefault();
+// }
 
-  3. Comment/un-comment the { mainListItems, secondaryListItems } 
-  import in components/Layout.tsx and then test in development.
+// export default function Deposits(props: any) {
+//   return (
+//     <React.Fragment {...props}>
+//       <Title>{t.depositTitle}</Title>
+//       <Typography component='p' variant='h4'>
+//         {t.depositCost}
+//       </Typography>
+//       <Typography color='text.secondary' sx={{ flex: 1 }}>
+//         {t.depositDate}
+//       </Typography>
+//       <div>
+//         <Link color='primary' href='#' onClick={preventDefault}>
+//           {t.depositLink}
+//         </Link>
+//       </div>
+//     </React.Fragment>
+//   );
+// }
 
-*/
+// COPYRIGHT
+// import * as React from 'react';
+// import Link from '@material-ui/core/Link';
+// import Typography from '@material-ui/core/Typography';
+// 
+// 
+// export default function Copyright(props: any) {
+  // return (
+    // <Typography variant='body2' color='text.secondary' align='center' {...props}>
+      {/* {t.copyright} {' © '} */}
+      {/* <Link color='inherit' href='https://github.com/Brlaney/mui-dash'> */}
+        {/* {t.copyrightLink} */}
+      {/* </Link>{' '} */}
+      {/* {new Date().getFullYear()} */}
+      {/* {'.'} */}
+    {/* </Typography> */}
+  // );
+// }
+// 
 
-import en from '@/locales/en';
-import es from '@/locales/es';
-import fr from '@/locales/fr';
-import hi from '@/locales/hi';
 
-export default function IndexPage() {
-  const [showBanner, setBanner] = useState(true);
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : es
-    | 'es' ? es : fr
-    | 'fr' ? fr : hi
-    | 'hi' ? hi : null;
-  
-  const changeLanguage = (e) => {
-    const locale = e.target.value;
-    router.push('/', '/', { locale });
-  };
-  
-  return (
-    <nav>
-      
-    </nav>
-  )
-}
+// CHART
+// import * as React from 'react';
+// import { useTheme } from '@material-ui/core/styles';
+// import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
+// import Title from './Title';
 
-module.exports = {
-  i18n: {
-    locales: ['en', 'es', 'fr', 'hi'],
-    defaultLocale: 'en',
-  },
-};
 
-// English ~
-import Chart from '@/components/en/Chart';
-import Deposits from '@/components/en/Deposits';
-import Orders from '@/components/en/Orders';
-import Copyright from '@/components/en/Copyright';
+// // Generate Sales Data for chart display
+// function createData(time: string, amount?: number) {
+//   return { time, amount };
+// }
 
-// Spanish ~
-// import Chart from '@/components/es/Chart';
-// import Deposits from '@/components/es/Deposits';
-// import Orders from '@/components/es/Orders';
-// import Copyright from '@/components/es/Copyright';
+// const data = [
+//   createData('00:00', 0),
+//   createData('03:00', 300),
+//   createData('06:00', 600),
+//   createData('09:00', 800),
+//   createData('12:00', 1500),
+//   createData('15:00', 2000),
+//   createData('18:00', 2400),
+//   createData('21:00', 2400),
+//   createData('24:00', undefined),
+// ];
 
-// French ~
-// import Chart from '@/components/es/Chart';
-// import Deposits from '@/components/es/Deposits';
-// import Orders from '@/components/es/Orders';
-// import Copyright from '@/components/es/Copyright';
+// export default function Chart(props: any) {
+//   const theme = useTheme();
 
-// Hindi ~
-// import Chart from '@/components/hi/Chart';
-// import Deposits from '@/components/hi/Deposits';
-// import Orders from '@/components/hi/Orders';
-// import Copyright from '@/components/hi/Copyright';
+//   return (
+//     <React.Fragment {...props}>
+//       <Title>{t.chartTitle}</Title>
+//       <ResponsiveContainer>
+//         <LineChart
+//           data={data}
+//           margin={{ top: 16, right: 16, bottom: 0, left: 24, }}
+//         >
+//           <XAxis
+//             dataKey='time'
+//             stroke={theme.palette.text.secondary}
+//             style={theme.typography.body2}
+//           />
+//           <YAxis
+//             stroke={theme.palette.text.secondary}
+//             style={theme.typography.body2}
+//           >
+//             <Label
+//               angle={270}
+//               position='left'
+//               style={{
+//                 textAnchor: 'middle',
+//                 fill: theme.palette.text.primary,
+//                 ...theme.typography.body1,
+//               }}
+//             >
+//               {t.chartLabel}
+//             </Label>
+//           </YAxis>
+//           <Line
+//             isAnimationActive={false}
+//             type='monotone'
+//             dataKey='amount'
+//             stroke={theme.palette.primary.main}
+//             dot={false}
+//           />
+//         </LineChart>
+//       </ResponsiveContainer>
+//     </React.Fragment>
+//   );
+// }
 
 
 function DashboardContent() {
@@ -89,51 +140,58 @@ function DashboardContent() {
       <Box
         component='main'
         sx={{
-          backgroundColor: (theme) => theme.palette.mode === 'light'
-            ? theme.palette.grey[100]
-            : theme.palette.grey[900],
+          backgroundColor: '#f5f5f5',
           flexGrow: 1,
           height: '100vh',
           overflow: 'auto',
         }}
       >
         <Toolbar />
-
         <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
 
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
-              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}>
-                <Chart />
+              <Paper
+                sx={{
+                  p: 2, display: 'flex',
+                  flexDirection: 'column',
+                  height: 240
+                }}
+              >
+                {/* <Chart /> */}
               </Paper>
             </Grid>
 
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
-              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240, }}>
-                <Deposits />
+              <Paper
+                sx={{
+                  p: 2, display: 'flex',
+                  flexDirection: 'column',
+                  height: 240
+                }}
+              >
+                {/* <Deposits /> */}
               </Paper>
             </Grid>
-            
+
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                 <Orders />
               </Paper>
             </Grid>
-
           </Grid>
 
           {/* Copyright component */}
-          <Copyright sx={{ pt: 4 }} />
-
+          {/* <Copyright sx={{ pt: 4 }} /> */}
         </Container>
       </Box>
     </Box>
-  );
+  )
 }
 
 export default function Index() {
-  return <DashboardContent />;
+  return <DashboardContent />
 }
