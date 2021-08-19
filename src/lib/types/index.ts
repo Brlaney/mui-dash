@@ -1,3 +1,9 @@
+export interface IInfo {
+  id: number
+  text: string
+}
+
+
 export interface IOrder {
   id: number
   date: string
