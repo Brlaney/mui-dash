@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 import { styled } from '@material-ui/core/styles'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -30,10 +31,11 @@ import hi from '@/lib/data/list-items/hi'
 const drawerWidth: number = 244
 
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean
+  [x: string]: any
+  open?: string
 }
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (props: any) => props !== 'open' })(
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
@@ -59,9 +61,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (props: any) => props !== 
   }),
 )
 
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (props: any) => props !== 'open',
-})<AppBarProps>(({ theme, open }) => ({
+const AppBar = styled(MuiAppBar, { shouldForwardProp: (prop: string) => prop !== 'open', })<AppBarProps>(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
@@ -78,7 +78,7 @@ const AppBar = styled(MuiAppBar, {
 }))
 
 export default function Layout() {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = useState(true)
   const toggleDrawer = () => { setOpen(!open) }
   const router = useRouter()
   const { locale } = router
