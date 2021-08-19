@@ -38,7 +38,7 @@ export default function MyApp(props: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} key={router.route} data={t} />
+        <Component {...pageProps} key={router.route} />
       </ThemeProvider>
     </CacheProvider>
   )

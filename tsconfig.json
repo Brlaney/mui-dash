@@ -4,8 +4,7 @@
     "paths": {
       "@/styles/*": ["./src/scss/*"],
       "@/components/*": ["./src/components/*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/orders/*": ["src/lib/data/orders/*"],
+      "@/lib/*": ["./src/lib/*"]
     },
     "lib": [
       "dom",

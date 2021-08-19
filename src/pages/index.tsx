@@ -19,9 +19,10 @@ import es from '@/lib/data/content/es'
 import fr from '@/lib/data/content/fr'
 import hi from '@/lib/data/content/hi'
 
-
-// // Generate Sales Data for chart display
-function createData(time: string, amount?: number) {
+function createData(
+  time: string,
+  amount?: number
+) {
   return { time, amount }
 }
 
@@ -37,13 +38,11 @@ const data = [
   createData('24:00', undefined),
 ]
 
-
-
-function DashboardContent(props: any) {
+function DashboardContent() {
   const theme = useTheme()
   const router = useRouter()
   const { locale } = router
-  
+
   const t = locale === 'en'
     ? en : es === es
     ? es : fr === fr
@@ -56,92 +55,42 @@ function DashboardContent(props: any) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-
       <Layout />
-
-      <Box
-        component='main'
-        sx={{
-          backgroundColor: '#f5f5f5',
-          flexGrow: 1,
-          height: '100vh',
-          overflow: 'auto',
-        }}
-      >
+      <Box component='main' sx={{ backgroundColor: '#f5f5f5', flexGrow: 1, height: '100vh', overflow: 'auto', }}>
         <Toolbar />
         <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
-
             <Grid item xs={12} md={8} lg={9}>
-              <Paper
-                sx={{
-                  p: 2, display: 'flex',
-                  flexDirection: 'column',
-                  height: 240
-                }}
-              >
-                <Title>{t.chartTitle}</Title>
-                <ResponsiveContainer>
-                  <LineChart
-                    data={data}
-                    margin={{ top: 16, right: 16, bottom: 0, left: 24, }}
-                  >
-                    <XAxis
-                      dataKey='time'
-                      stroke={theme.palette.text.secondary}
-                      style={theme.typography.body2}
-                    />
-                    <YAxis
-                      stroke={theme.palette.text.secondary}
-                      style={theme.typography.body2}
-                    >
-                      <Label
-                        angle={270}
-                        position='left'
-                        style={{
-                          textAnchor: 'middle',
-                          fill: theme.palette.text.primary,
-                          ...theme.typography.body1,
-                        }}
-                      >
-                        {t.chartLabel}
-                      </Label>
-                    </YAxis>
-                    <Line
-                      isAnimationActive={false}
-                      type='monotone'
-                      dataKey='amount'
-                      stroke={theme.palette.primary.main}
-                      dot={false}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </Paper>
-            </Grid>
+              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240 }}>
 
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper
-                sx={{
-                  p: 2, display: 'flex',
-                  flexDirection: 'column',
-                  height: 240
-                }}
-              >
-                <Title>{t.depositTitle}</Title>
-                <Typography component='p' variant='h4'>
-                  {t.depositCost}
-                </Typography>
-                <Typography color='text.secondary' sx={{ flex: 1 }}>
-                  {t.depositDate}
-                </Typography>
-                <div>
-                  <Link color='primary' href='#' onClick={preventDefault}>
-                    {t.depositLink}
-                  </Link>
+                {/* Chart */}
+                <div style={{ padding: '1rem', margin: '1rem' }}> 
+                  <Title>{t.chartTitle}</Title>
+                  <ResponsiveContainer>
+                    <LineChart data={data} margin={{ top: 16, right: 16, bottom: 0, left: 24, }} >
+                      <XAxis dataKey='time' stroke={theme.palette.text.secondary} style={theme.typography.body2} />
+                      <YAxis stroke={theme.palette.text.secondary} style={theme.typography.body2} >
+                        <Label angle={270} position='left' style={{ textAnchor: 'middle', fill: theme.palette.text.primary, ...theme.typography.body1, }} >
+                          {t.chartLabel}
+                        </Label>
+                      </YAxis>
+                      <Line isAnimationActive={false} type='monotone' dataKey='amount' stroke={theme.palette.primary.main} dot={false} />
+                    </LineChart>
+                  </ResponsiveContainer>
                 </div>
+
               </Paper>
             </Grid>
 
+            {/* Orders */}
+            <Grid item xs={12} md={4} lg={3}>
+              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240 }}>
+                <Title>{t.depositTitle}</Title>
+                <Typography component='p' variant='h4'>{t.depositCost}</Typography>
+                <Typography color='inherit' sx={{ flex: 1 }}>{t.depositDate}</Typography>
+                <div><Link color='primary' href='#' onClick={preventDefault}>{t.depositLink}</Link></div>
+              </Paper>
+            </Grid>
             <Grid item xs={12}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                 <Orders />
@@ -149,14 +98,17 @@ function DashboardContent(props: any) {
             </Grid>
           </Grid>
 
-          <Typography variant='body2' color='text.secondary' align='center' {...props}>
-            {t.copyright} {' © '}
-            <Link color='inherit' href='https://github.com/Brlaney/mui-dash'>
-              {t.copyrightLink}
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-          </Typography>
+          {/* Copyright footer */}
+          <div style={{ paddingBottom: '0.85rem', bottom: '0', position: 'absolute', width: '80%' }}>
+            <Typography variant='body2' color='inherit' align='center'>
+              {t.copyright} {' © '}
+              <Link color='inherit' href='https://github.com/Brlaney/mui-dash'>
+                {t.copyrightLink}
+              </Link>{' '}
+              {new Date().getFullYear()}
+              {'.'}
+            </Typography>
+          </div>
         </Container>
       </Box>
     </Box>

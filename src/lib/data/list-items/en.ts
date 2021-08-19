@@ -4,7 +4,8 @@ export default {
   three: 'Customers',
   four: 'Reports',
   five: 'Integrations',
-  six: 'Current month',
-  seven: 'Last quarter',
-  eight: 'Year-end sale'
+  six: 'Saved reports',
+  seven: 'Current month',
+  eight: 'Last quarter',
+  nine: 'Year-end sale'
 };

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useRouter } from 'next/router'
-import { experimentalStyled as styled } from '@material-ui/core/styles'
+import { styled } from '@material-ui/core/styles'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -29,9 +29,11 @@ import hi from '@/lib/data/list-items/hi'
 
 const drawerWidth: number = 244
 
-interface AppBarProps extends MuiAppBarProps {open?: boolean}
+interface AppBarProps extends MuiAppBarProps {
+  open?: boolean
+}
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (props: any) => props !== 'open' })(
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
@@ -58,7 +60,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 )
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: (props: any) => props !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(['width', 'margin'], {
@@ -77,25 +79,25 @@ const AppBar = styled(MuiAppBar, {
 
 export default function Layout() {
   const [open, setOpen] = React.useState(true)
-  const toggleDrawer = () => {setOpen(!open)}
+  const toggleDrawer = () => { setOpen(!open) }
   const router = useRouter()
   const { locale } = router
 
   const message = locale === 'en'
     ? 'Welcome, to your dashboard'
     : locale === 'es'
-    ? 'Bienvenido, a tu tablero.'
-    : locale === 'fr'
-    ? 'Bienvenue à votre conseil.'
-    : locale === 'hi'
-    ? 'आपकी सलाह में आपका स्वागत है।'
-    : ''
-  
+      ? 'Bienvenido, a tu tablero.'
+      : locale === 'fr'
+        ? 'Bienvenue à votre conseil.'
+        : locale === 'hi'
+          ? 'आपकी सलाह में आपका स्वागत है।'
+          : ''
+
   const t = locale === 'en'
     ? en : es === es
-    ? es : fr === fr
-    ? fr : hi === hi
-    ? hi : en
+      ? es : fr === fr
+        ? fr : hi === hi
+          ? hi : en
 
   return (
     <>
@@ -150,63 +152,59 @@ export default function Layout() {
 
         {/* Main list items */}
         <List>
-          <div>
-            <ListItem button>
-              <ListItemIcon>
-                <DashboardIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.one} />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <ShoppingCartIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.two} />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <PeopleIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.three} />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <BarChartIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.four} />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <LayersIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.five} />
-            </ListItem>
-          </div>
+          <ListItem button>
+            <ListItemIcon>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.one} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <ShoppingCartIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.two} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.three} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <BarChartIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.four} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <LayersIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.five} />
+          </ListItem>
         </List>
         <Divider />
         {/* Secondary list items */}
         <List>
-          <div>
-            <ListSubheader inset>Saved reports</ListSubheader>
-            <ListItem button>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.six} />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.seven} />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary={t.eight} />
-            </ListItem>
-          </div>
+          <ListSubheader inset>{t.six}</ListSubheader>
+          <ListItem button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.seven} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.eight} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary={t.nine} />
+          </ListItem>
         </List>
       </Drawer>
     </>

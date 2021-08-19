@@ -4,7 +4,8 @@ export default {
   three: "Les clients",
   four: "Rapports",
   five: "Intégration",
-  six: "Mois en cours",
-  seven: "Dernier quart",
-  eight: "Vente de fin d'année"
+  six: "Rapports enregistrés",
+  seven: "Mois en cours",
+  eight: "Dernier quart",
+  nine: "Vente de fin d'année"
 };
