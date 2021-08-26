@@ -44,9 +44,9 @@ function DashboardContent() {
 
   const t = locale === 'en'
     ? en : es === es
-    ? es : fr === fr
-    ? fr : hi === hi
-    ? hi : en
+      ? es : fr === fr
+        ? fr : hi === hi
+          ? hi : en
 
   function preventDefault(event: React.MouseEvent) {
     event.preventDefault()
@@ -62,8 +62,8 @@ function DashboardContent() {
             <Grid item xs={12} md={8} lg={9}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240 }}>
 
-                {/* Chart */}
-                <Container> 
+                {/* Charts */}
+                <Container>
                   <Title>{t.chartTitle}</Title>
                   <ResponsiveContainer>
                     <LineChart data={data} margin={{ top: 16, right: 16, bottom: 0, left: 24, }} >
@@ -73,7 +73,7 @@ function DashboardContent() {
                           {t.chartLabel}
                         </Label>
                       </YAxis>
-                      <Line isAnimationActive={false} type='monotone' dataKey='amount' stroke={theme.palette.primary.main} dot={false} />
+                      <Line isAnimationActive={true} type='monotone' dataKey='amount' stroke={theme.palette.primary.main} dot={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </Container>
