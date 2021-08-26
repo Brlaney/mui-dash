@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Copyright from '@/components/en/Copyright';
 import Layout from '@/components/Layout';
 
 function Content() {
@@ -30,7 +29,7 @@ function Content() {
 
         <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
-            
+
             {/* Page title */}
             <Grid item xs={12}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
@@ -39,12 +38,7 @@ function Content() {
                 </Typography>
               </Paper>
             </Grid>
-
           </Grid>
-
-          {/* Copyright component */}
-          <Copyright sx={{ pt: 4 }} />
-
         </Container>
       </Box>
     </Box>

@@ -32,7 +32,6 @@ const data = [
   createData('06:00', 600),
   createData('09:00', 800),
   createData('12:00', 1500),
-  createData('15:00', 2000),
   createData('18:00', 2400),
   createData('21:00', 2400),
   createData('24:00', undefined),
@@ -64,7 +63,7 @@ function DashboardContent() {
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240 }}>
 
                 {/* Chart */}
-                <div style={{ padding: '1rem', margin: '1rem' }}> 
+                <Container> 
                   <Title>{t.chartTitle}</Title>
                   <ResponsiveContainer>
                     <LineChart data={data} margin={{ top: 16, right: 16, bottom: 0, left: 24, }} >
@@ -77,7 +76,7 @@ function DashboardContent() {
                       <Line isAnimationActive={false} type='monotone' dataKey='amount' stroke={theme.palette.primary.main} dot={false} />
                     </LineChart>
                   </ResponsiveContainer>
-                </div>
+                </Container>
 
               </Paper>
             </Grid>
@@ -87,7 +86,7 @@ function DashboardContent() {
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 240 }}>
                 <Title>{t.depositTitle}</Title>
                 <Typography component='p' variant='h4'>{t.depositCost}</Typography>
-                <Typography color='inherit' sx={{ flex: 1 }}>{t.depositDate}</Typography>
+                <Typography>{t.depositDate}</Typography>
                 <div><Link color='primary' href='#' onClick={preventDefault}>{t.depositLink}</Link></div>
               </Paper>
             </Grid>
