@@ -13,8 +13,8 @@ import {
 
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'date', headerName: 'Date', width: 125 },
+  { field: 'id', headerName: 'ID', width: 125 },
+  { field: 'date', headerName: 'Date', width: 150 },
   {
     field: 'Name',
     headerName: 'Last, first name',
@@ -28,7 +28,7 @@ const columns: GridColDef[] = [
     field: 'Location',
     headerName: 'Location',
     sortable: false,
-    width: 140,
+    width: 200,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'city') || ''} ,
        ${params.getValue(params.id, 'state') || ''}`,
@@ -42,7 +42,7 @@ const columns: GridColDef[] = [
       `${params.getValue(params.id, 'company') || ''}
        •••• ${params.getValue(params.id, 'card') || ''}`,
   },
-  { field: 'cost', headerName: 'Cost', width: 125 },
+  { field: 'cost', headerName: 'Cost', width: 180 },
 ]
 
 const Orders = (props: any) => {
