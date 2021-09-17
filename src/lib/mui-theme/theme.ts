@@ -1,6 +1,9 @@
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import {
+  createTheme,
+  responsiveFontSizes
+} from '@material-ui/core/styles';
 
-const font = "'Lato', sans-serif"
+const font = "'Lato', sans-serif";
 
 let theme = createTheme({
   palette: {
@@ -59,8 +62,8 @@ let theme = createTheme({
       fontSize: 16
     }
   }
-})
+});
 
-theme = responsiveFontSizes(theme)
+theme = responsiveFontSizes(theme);
 
-export default theme
+export default theme;
