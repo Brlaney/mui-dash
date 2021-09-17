@@ -19,7 +19,6 @@
     - [2. Install dependencies](#2-install-dependencies)
     - [3. Ready for development](#3-ready-for-development)
 - [Connect with me](#connect-with-me)
-- [References](#references)
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
@@ -99,13 +98,6 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 - Email: <brlaney@outlook.com>
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
-
-# References
-
-- Wikipedia:
-  - [Direct Stiffness Method](https://en.wikipedia.org/wiki/Direct_stiffness_method)
-  - [Finite Element Method](https://en.wikipedia.org/wiki/Finite_element_method)
-  - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
 
 # License
 
