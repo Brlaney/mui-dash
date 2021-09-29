@@ -7,7 +7,7 @@
   </p>
   <h1>Mui-dash</h1>
   <h5>A custom Material-UI Dashboard template</h5>
-  <p><b>mui-dash</b> is a <b>Next.js app</b> that features multi-lingual support, Typescript, and Sass.</p>
+  <p><b>Mui-dash</b> is a <b>Next.js app</b> that features multi-lingual support, Typescript, and Sass.</p>
 </div>
 
 ## Table Of Contents
