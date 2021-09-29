@@ -1,4 +1,4 @@
-import { IInfo } from '@/lib/types';
+import { IInfo } from '@/lib/config/types';
 
 export const data: IInfo[] = [
   {

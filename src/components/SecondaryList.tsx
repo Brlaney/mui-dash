@@ -1,9 +1,9 @@
-import * as React from 'react'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListSubheader from '@material-ui/core/ListSubheader'
-import AssignmentIcon from '@material-ui/icons/Assignment'
+import * as React from 'react';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ListSubheader from '@mui/material/ListSubheader';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 interface data {
   one: string;
@@ -15,9 +15,9 @@ interface data {
   seven: string;
   eight: string;
   nine: string;
-}
+};
 
-const SecondaryList = ({data}) => {
+const SecondaryList = ({ data }) => {
   return (
     <div>
       <ListSubheader inset>{data.six}</ListSubheader>
@@ -41,6 +41,6 @@ const SecondaryList = ({data}) => {
       </ListItem>
     </div>
   )
-}
+};
 
-export default SecondaryList
+export default SecondaryList;

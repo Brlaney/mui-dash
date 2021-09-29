@@ -1,33 +1,29 @@
-import * as React from 'react'
-import { useRouter } from 'next/router'
-import Box from '@material-ui/core/Box'
-import Toolbar from '@material-ui/core/Toolbar'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-
-// Import SEO data for each supported locale
-import en from '@/lib/data/content/en'
-import es from '@/lib/data/content/es'
-import fr from '@/lib/data/content/fr'
-import hi from '@/lib/data/content/hi'
-
-import Chart from '@/components/Chart'
-import Copyright from '@/components/Copyright'
-import Deposits from '@/components/Deposits'
-import Layout from '@/components/Layout'
-import Orders from '@/components/Orders'
-
+import * as React from 'react';
+import { useRouter } from 'next/router';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import en from '@/lib/data/content/en';
+import es from '@/lib/data/content/es';
+import fr from '@/lib/data/content/fr';
+import hi from '@/lib/data/content/hi';
+import Chart from '@/components/Chart';
+import Copyright from '@/components/Copyright';
+import Deposits from '@/components/Deposits';
+import Layout from '@/components/Layout';
+import Orders from '@/components/Orders';
 
 function DashboardContent() {
-  const router = useRouter()
-  const { locale } = router
+  const router = useRouter();
+  const { locale } = router;
 
   const t = locale === 'en'
     ? en : es === es
-    ? es : fr === fr
-    ? fr : hi === hi
-    ? hi : en
+      ? es : fr === fr
+        ? fr : hi === hi
+          ? hi : en;
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -91,21 +87,16 @@ function DashboardContent() {
                 <Orders />
               </Paper>
             </Grid>
-
           </Grid>
 
-          {/* Copyright component */}
-          <Copyright
-            content={t}
-            sx={{ pt: 4 }}
-          />
-
+          {/* Copyright footer */}
+          <Copyright content={t} />
         </Container>
       </Box>
     </Box>
   )
-}
+};
 
 export default function Index() {
   return <DashboardContent />
-}
+};

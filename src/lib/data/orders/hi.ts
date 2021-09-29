@@ -1,4 +1,4 @@
-import { IOrder } from "@/lib/types"
+import { IOrder } from "@/lib/config/types"
 
 export const orders: IOrder[] = [
   {

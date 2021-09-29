@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 interface TitleProps {
   children?: React.ReactNode;
-}
+};
 
 export default function Title(props: TitleProps) {
   return (
@@ -16,4 +16,4 @@ export default function Title(props: TitleProps) {
       {props.children}
     </Typography>
   );
-}
+};

@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { useRouter } from 'next/router'
-import { orders as en } from '@/lib/data/orders/en'
-import { orders as es } from '@/lib/data/orders/es'
-import { orders as fr } from '@/lib/data/orders/fr'
-import { orders as hi } from '@/lib/data/orders/hi'
-import Title from './Title'
-import {
-  DataGrid,
-  GridColDef,
-  GridValueGetterParams
-} from '@material-ui/data-grid'
+import * as React from 'react';
+import { useRouter } from 'next/router';
+import { orders as en } from '@/lib/data/orders/en';
+import { orders as es } from '@/lib/data/orders/es';
+import { orders as fr } from '@/lib/data/orders/fr';
+import { orders as hi } from '@/lib/data/orders/hi';
+import Title from './Title';
+// import {
+//   DataGrid,
+//   GridColDef,
+//   GridValueGetterParams
+// } from '@mui/x-data-grid';
 
-
+/*
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 125 },
   { field: 'date', headerName: 'Date', width: 150 },
@@ -43,7 +43,8 @@ const columns: GridColDef[] = [
        •••• ${params.getValue(params.id, 'card') || ''}`,
   },
   { field: 'cost', headerName: 'Cost', width: 180 },
-]
+];
+*/
 
 const Orders = (props: any) => {
   const router = useRouter()
@@ -52,18 +53,18 @@ const Orders = (props: any) => {
   const message = locale === 'en'
     ? 'Recent Orders'
     : locale === 'es'
-    ? 'órdenes recientes'
-    : locale === 'fr'
-    ? 'Dernières commandes'
-    : locale === 'hi'
-    ? 'हालिया आदेश'
-    : ''
+      ? 'órdenes recientes'
+      : locale === 'fr'
+        ? 'Dernières commandes'
+        : locale === 'hi'
+          ? 'हालिया आदेश'
+          : '';
   
   const t = locale === 'en'
     ? en : es === es
-    ? es : fr === fr
-    ? fr : hi === hi
-    ? hi : en
+      ? es : fr === fr
+        ? fr : hi === hi
+          ? hi : en;
 
   return (
     <React.Fragment {...props}>
@@ -75,15 +76,16 @@ const Orders = (props: any) => {
           paddingBottom: '25px'
         }}
       >
-        <DataGrid
+        DATA HERE
+        {/* <DataGrid
           rows={t}
           columns={columns}
           pageSize={5}
           checkboxSelection
-        />
+        /> */}
       </div>
     </React.Fragment>
   )
-}
+};
 
-export default Orders
+export default Orders;

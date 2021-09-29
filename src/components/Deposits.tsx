@@ -1,26 +1,15 @@
-import * as React from 'react'
-import Link from '@material-ui/core/Link'
-import Typography from '@material-ui/core/Typography'
-import Title from './Title'
-
-interface content {
-  chartTitle: string
-  chartLabel: string
-  copyright: string
-  copyrightLink: string
-  depositTitle: string
-  depositCost: string
-  depositDate: string
-  depositLink: string
-}
+import * as React from 'react';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+import Title from './Title';
 
 function preventDefault(event: React.MouseEvent) {
   event.preventDefault()
-}
+};
 
 export default function Deposits({ content }) {
   return (
-    <React.Fragment>
+    <>
       <Title>{content.depositTitle}</Title>
       <Typography component='p' variant='h4'>
         {content.depositCost}
@@ -33,6 +22,6 @@ export default function Deposits({ content }) {
           {content.depositLink}
         </Link>
       </div>
-    </React.Fragment>
+    </>
   )
-}
+};

@@ -1,16 +1,9 @@
-import * as React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import createEmotionServer from '@emotion/server/create-instance'
-import createCache from '@emotion/cache'
-import { CacheProvider } from '@emotion/react'
+import * as React from 'react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import createEmotionServer from '@emotion/server/create-instance';
+import createEmotionCache from '@/lib/config/cache/createEmotionCache';
 
-function getCache() {
-  const cache = createCache({ key: 'css', prepend: true })
-  cache.compat = true
-  return cache
-}
-
-export default class CustomDocument extends Document {
+export default class MyDocument extends Document {
   render () {
     return (
       <Html lang='en'>
@@ -22,25 +15,21 @@ export default class CustomDocument extends Document {
       </Html>
     )
   }
-}
+};
 
-CustomDocument.getInitialProps = async (ctx) => {
-  const originalRenderPage = ctx.renderPage
-  const cache = getCache()
-  const { extractCriticalToChunks } = createEmotionServer(cache)
+MyDocument.getInitialProps = async (ctx) => {
+  const originalRenderPage = ctx.renderPage;
+
+  const cache = createEmotionCache();
+  const { extractCriticalToChunks } = createEmotionServer(cache);
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceComponent: (Component) => (props) =>
-        (
-          <CacheProvider value={cache}>
-            <Component {...props} />
-          </CacheProvider>
-        ),
-    })
+      enhanceApp: (App: any) => (props) => <App emotionCache={cache} {...props} />,
+    });
 
-  const initialProps = await Document.getInitialProps(ctx)
-  const emotionStyles = extractCriticalToChunks(initialProps.html)
+  const initialProps = await Document.getInitialProps(ctx);
+  const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
       data-emotion={`${style.key} ${style.ids.join(' ')}`}
@@ -48,10 +37,10 @@ CustomDocument.getInitialProps = async (ctx) => {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
-  ))
+  ));
 
   return {
     ...initialProps,
     styles: [...React.Children.toArray(initialProps.styles), ...emotionStyleTags],
-  }
-}
+  };
+};

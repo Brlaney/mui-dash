@@ -6,7 +6,7 @@ body {
   margin: 0;
   background: $c-bg;
   color: #fff;
-  font-family: $primary-font-family;
+  font-family: $primary-font;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -41,4 +41,12 @@ a {
   #secondaryList {
     background-color: $c-error;
   }
+}
+
+.footer {
+  bottom: 0;
+  margin-top: 2rem;
+  // .footerlink {
+  //   margin: 0 0.3rem 0 0.3rem;
+  // }
 }

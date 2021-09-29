@@ -10,7 +10,7 @@
   <p><b>mui-dash</b> is a <b>Next.js app</b> that features multi-lingual support, Typescript, and Sass.</p>
 </div>
 
-# Table Of Contents
+## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
 - [Features](#features)
@@ -22,7 +22,7 @@
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
-# Features
+## Features
 
 - 🌎 Implements Next's built-in [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing) for multi-language support.
 - Currently supported locales include (see figures below):
@@ -30,13 +30,10 @@
   - Spanish (es) - figure 2.
   - French (fr) - figure 3.
   - Hindi (hi) - figure 4.
-- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://next.material-ui.com/getting-started/templates/dashboard/).
+- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://mui.com/getting-started/templates/dashboard/).
   
 </br>
 
-</br>
-
-  
 <table>
   <thead><tr>
     <th>English, en - figure 1.</th>
@@ -58,7 +55,7 @@
 
 </br>
 
-# Quick Start
+## Quick Start
 
 ### 1. Clone repository
 
@@ -93,13 +90,13 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 </br>
 
-# Connect with me
+## Connect with me
 
 - Email: <brlaney@outlook.com>
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
-# License
+## License
 
 This repository was built on Material-UI's official [Dashboard](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) template. All of their templates can be found [here](https://next.material-ui.com/getting-started/templates/). I am not the original author of the *template* this project was built on-top of. I have added features, re-structured components, and added my own code to the aforementioned template in order to better fit my needs.
 
@@ -127,6 +124,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-# Contributions and issues
+## Contributions and issues
 
 I would love your feedback on my project - please feel free to make a pull request or submit an issue if you find any. Thanks for checking out my project!

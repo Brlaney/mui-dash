@@ -1,26 +1,14 @@
-import * as React from 'react'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import DashboardIcon from '@material-ui/icons/Dashboard'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
-import PeopleIcon from '@material-ui/icons/People'
-import BarChartIcon from '@material-ui/icons/BarChart'
-import LayersIcon from '@material-ui/icons/Layers'
+import * as React from 'react';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PeopleIcon from '@mui/icons-material/People';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import LayersIcon from '@mui/icons-material/Layers';
 
-interface data {
-  one: string;
-  two: string;
-  three: string;
-  four: string;
-  five: string;
-  six: string;
-  seven: string;
-  eight: string;
-  nine: string;
-}
-
-const MainList = ({data}) => {
+const MainList = ({ data }) => {
   return (
     <div>
       <ListItem button>
@@ -55,6 +43,6 @@ const MainList = ({data}) => {
       </ListItem>
     </div>
   )
-}
+};
 
-export default MainList
+export default MainList;
