@@ -19,7 +19,7 @@ import hi from '@/lib/data/list-items/hi';
 import MainList from './MainList';
 import SecondaryList from './SecondaryList';
 
-const drawerWidth: number = 244;
+const drawerWidth: number = 270;
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean
@@ -100,14 +100,32 @@ export default function Layout() {
       {/* Navbar */}
       <AppBar position='absolute' open={open}>
         <Toolbar sx={{ pr: '24px' }}>
-          <IconButton edge='start' color='inherit' aria-label='open drawer' onClick={toggleDrawer} sx={{ marginRight: '36px', ...(open && { display: 'none' }) }}>
+          <IconButton
+            edge='start'
+            color='inherit'
+            aria-label='open drawer'
+            onClick={toggleDrawer}
+            sx={{
+              marginRight: '36px', ...(open && { display: 'none' })
+            }}
+          >
             <MenuIcon />
           </IconButton>
-          <Typography component='h1' variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
+          <Typography
+            component='h1'
+            variant='h6'
+            color='inherit'
+            noWrap sx={{ flexGrow: 1 }}
+          >
             {message}
           </Typography>
           <IconButton color='inherit'>
-            <Badge overlap='circular' variant='dot' color='secondary' sx={{ color: 'white' }}>
+            <Badge
+              overlap='circular'
+              variant='dot'
+              color='secondary'
+              sx={{ color: 'white' }}
+            >
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -116,7 +134,13 @@ export default function Layout() {
 
       {/* Sidebar */}
       <Drawer variant='permanent' open={open}>
-        <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', px: [1], }}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            px: [1],
+          }}>
           <IconButton onClick={toggleDrawer}>
             <ChevronLeftIcon />
           </IconButton>

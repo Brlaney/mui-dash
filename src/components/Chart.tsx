@@ -10,17 +10,6 @@ import {
 } from 'recharts';
 import Title from './Title';
 
-interface content {
-  chartTitle: string;
-  chartLabel: string;
-  copyright: string;
-  copyrightLink: string;
-  depositTitle: string;
-  depositCost: string;
-  depositDate: string;
-  depositLink: string;
-}
-
 // Generate Sales Data
 function createData(time: string, amount?: number) {
   return { time, amount }

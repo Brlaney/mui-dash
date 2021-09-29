@@ -39,8 +39,8 @@ export default function MyApp(props: MyAppProps) {
         <meta charSet='utf-8' />
         <meta name='viewport' content='initial-scale=1 width=device-width' />
         <meta name='keywords' content={t.keywords} />
-        <link rel='icon' href='/mui-dash.svg' />
         <meta name='description' content={t.description} />
+        <link rel='icon' type='image/png' href='mui.png' />
         <title>{t.title}</title>
       </Head>
       <ThemeProvider theme={theme}>

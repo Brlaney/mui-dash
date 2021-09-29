@@ -13,12 +13,10 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 #__next > div > main::-webkit-scrollbar {
@@ -32,21 +30,4 @@ a {
 #__next > div > main::-webkit-scrollbar-thumb {
   background-color: $c-primary;
   outline: 1px solid slategrey;
-}
-
-.div {
-  #mainList {
-    background-color: $c-error;
-  }
-  #secondaryList {
-    background-color: $c-error;
-  }
-}
-
-.footer {
-  bottom: 0;
-  margin-top: 2rem;
-  // .footerlink {
-  //   margin: 0 0.3rem 0 0.3rem;
-  // }
 }

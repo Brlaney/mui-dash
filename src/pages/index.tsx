@@ -19,6 +19,8 @@ function DashboardContent() {
   const router = useRouter();
   const { locale } = router;
 
+  console.log(locale);
+
   const t = locale === 'en'
     ? en : es === es
       ? es : fr === fr
@@ -90,7 +92,22 @@ function DashboardContent() {
           </Grid>
 
           {/* Copyright footer */}
-          <Copyright content={t} />
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Box
+                sx={{
+                  p: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  position: 'fixed',
+                  bottom: 0,
+                  left: '50%'
+                }}
+              >
+                <Copyright content={t} />
+              </Box>
+            </Grid>
+          </Grid>
         </Container>
       </Box>
     </Box>

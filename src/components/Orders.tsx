@@ -46,7 +46,7 @@ const columns: GridColDef[] = [
 ];
 */
 
-const Orders = (props: any) => {
+const Orders = () => {
   const router = useRouter()
   const { locale } = router
 
@@ -67,7 +67,7 @@ const Orders = (props: any) => {
           ? hi : en;
 
   return (
-    <React.Fragment {...props}>
+    <>
       <Title>{message}</Title>
       <div
         style={{
@@ -84,7 +84,7 @@ const Orders = (props: any) => {
           checkboxSelection
         /> */}
       </div>
-    </React.Fragment>
+    </>
   )
 };
 

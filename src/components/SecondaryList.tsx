@@ -5,18 +5,6 @@ import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
-interface data {
-  one: string;
-  two: string;
-  three: string;
-  four: string;
-  five: string;
-  six: string;
-  seven: string;
-  eight: string;
-  nine: string;
-};
-
 const SecondaryList = ({ data }) => {
   return (
     <div>
