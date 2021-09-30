@@ -1,19 +1,21 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import LanguageIcon from '@mui/icons-material/Language';
 import IconButton from '@mui/material/IconButton';
-import Redirect from './Redirect';
+import Fade from '@mui/material/Fade';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Copyright({ data }, props: any) {
-  const [shouldRedirect, setShouldRedirect] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const router = useRouter();
-  const { locales } = router;
+
+  let { lang } = useTranslation();
+  let [lng, setLng] = useState(lang);
 
   const name = data('copyright')
   const link = data('copyrightLink')
@@ -26,9 +28,11 @@ export default function Copyright({ data }, props: any) {
     setAnchorEl(null);
   };
 
-  const handleRed = (loc) => {
-    return <Redirect to={loc} />;
-  };
+  /* This hook will re-render the order data
+  every time the locale changes.  */
+  useEffect(() => {
+    setLng(lang);
+  }, [lng]);
 
   return (
     <>
@@ -40,11 +44,8 @@ export default function Copyright({ data }, props: any) {
           align='center'
           {...props}
         >{name}{' '}
-          <Link
-            color='primary'
-            href='https://github.com/Brlaney/mui-dash'
-            className='link'
-          >{link}
+          <Link href='https://github.com/Brlaney/mui-dash'>
+            {link}
           </Link>{' '}
           {new Date().getFullYear()}
           {'.'}
@@ -66,6 +67,9 @@ export default function Copyright({ data }, props: any) {
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'fade-button',
+          }}
           anchorOrigin={{
             vertical: 'top',
             horizontal: 'left',
@@ -74,11 +78,16 @@ export default function Copyright({ data }, props: any) {
             vertical: 'top',
             horizontal: 'left',
           }}
+          TransitionComponent={Fade}
         >
-          {locales.map((loc) => (
-            <Link key={loc}>
-              <MenuItem onClick={() => { handleRed(loc) }}>
-                {loc}
+          {router.locales.map((locale) => (
+            <Link
+              key={locale}
+              locale={locale}
+              href={router.asPath}
+            >
+              <MenuItem onClick={handleClose}>
+                {locale}
               </MenuItem>
             </Link>
           ))}

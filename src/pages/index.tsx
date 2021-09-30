@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
@@ -13,14 +12,19 @@ import Orders from '@/components/Orders';
 import useTranslation from 'next-translate/useTranslation';
 
 function DashboardContent() {
+  let { lang } = useTranslation();
+  let [lng, setLng] = useState(lang);
   const { t } = useTranslation('home');
+
+  useEffect(() => {
+    setLng(lang);
+  }, [lng]);
 
   return (
     <Box sx={{ display: 'flex' }}>
 
       {/* Navbar & Sidebar component */}
       <Layout />
-
       <Box
         component='main'
         sx={{
@@ -33,11 +37,10 @@ function DashboardContent() {
         }}
       >
         <Toolbar />
-
         <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
 
-            {/* Chart */}
+            {/* Chart component */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper
                 sx={{
@@ -51,7 +54,7 @@ function DashboardContent() {
               </Paper>
             </Grid>
 
-            {/* Recent Deposits */}
+            {/* Deposits component */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper
                 sx={{
@@ -65,7 +68,7 @@ function DashboardContent() {
               </Paper>
             </Grid>
 
-            {/* Recent Orders */}
+            {/* Orders component */}
             <Grid item xs={12}>
               <Paper
                 sx={{
@@ -79,7 +82,7 @@ function DashboardContent() {
             </Grid>
           </Grid>
 
-          {/* Copyright footer */}
+          {/* Copyright component (footer) */}
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Box
@@ -89,7 +92,7 @@ function DashboardContent() {
                   flexDirection: 'column',
                   position: 'fixed',
                   bottom: 0,
-                  left: '50%'
+                  left: '41%'
                 }}
               >
                 <Copyright data={t} />

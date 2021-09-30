@@ -14,8 +14,8 @@ import {
 } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 125 },
-  { field: 'date', headerName: 'Date', width: 150 },
+  { field: 'id', headerName: 'ID', width: 50 },
+  { field: 'date', headerName: 'Date', width: 110 },
   {
     field: 'Name',
     headerName: 'Last, first name',
@@ -43,15 +43,21 @@ const columns: GridColDef[] = [
       `${params.getValue(params.id, 'company') || ''}
        •••• ${params.getValue(params.id, 'card') || ''}`,
   },
-  { field: 'cost', headerName: 'Cost', width: 180 },
+  { field: 'cost', headerName: 'Cost', width: 110 },
 ];
 
 const Orders = () => {
   let { lang } = useTranslation();
-  const [lng] = useState(lang);
+  let [lng, setLng] = useState(lang);
   const [data, setData] = useState([]);
   const { t } = useTranslation('home');
   const message = t('orderTitle');
+
+  /* This hook will re-render the order data
+  every time the locale changes.  */
+  useEffect(() => {
+    setLng(lang);
+  }, [lng]);
 
   /* The useEffect hook will match the locale with
   the associated order data for that language.  */
