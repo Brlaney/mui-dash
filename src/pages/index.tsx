@@ -13,11 +13,7 @@ import Orders from '@/components/Orders';
 import useTranslation from 'next-translate/useTranslation';
 
 function DashboardContent() {
-  const router = useRouter();
-  const { locale } = router;
-  let { t } = useTranslation();
-
-  console.log(t);
+  const { t } = useTranslation('home');
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -65,7 +61,7 @@ function DashboardContent() {
                   height: 240,
                 }}
               >
-                <Deposits content={t} />
+                <Deposits data={t} />
               </Paper>
             </Grid>
 
@@ -96,7 +92,7 @@ function DashboardContent() {
                   left: '50%'
                 }}
               >
-                <Copyright content={t} />
+                <Copyright data={t} />
               </Box>
             </Grid>
           </Grid>

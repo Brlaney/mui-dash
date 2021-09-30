@@ -1,18 +1,22 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import LanguageIcon from '@mui/icons-material/Language';
 import IconButton from '@mui/material/IconButton';
+import Redirect from './Redirect';
 
-export default function Copyright({ content }, props: any) {
+export default function Copyright({ data }, props: any) {
+  const [shouldRedirect, setShouldRedirect] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const router = useRouter();
-  const { locale, locales } = router;
+  const { locales } = router;
+
+  const name = data('copyright')
+  const link = data('copyrightLink')
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -20,6 +24,10 @@ export default function Copyright({ content }, props: any) {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleRed = (loc) => {
+    return <Redirect to={loc} />;
   };
 
   return (
@@ -31,12 +39,12 @@ export default function Copyright({ content }, props: any) {
           color='text.secondary'
           align='center'
           {...props}
-        >{content.copyright}{' '}
+        >{name}{' '}
           <Link
             color='primary'
             href='https://github.com/Brlaney/mui-dash'
             className='link'
-          >{content.copyrightLink}
+          >{link}
           </Link>{' '}
           {new Date().getFullYear()}
           {'.'}
@@ -69,7 +77,7 @@ export default function Copyright({ content }, props: any) {
         >
           {locales.map((loc) => (
             <Link key={loc}>
-              <MenuItem href='/' onClick={handleClose}>
+              <MenuItem onClick={() => { handleRed(loc) }}>
                 {loc}
               </MenuItem>
             </Link>

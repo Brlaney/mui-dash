@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useRouter } from 'next/router';
 import { styled } from '@mui/material/styles';
+import useTranslation from 'next-translate/useTranslation';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -12,10 +12,6 @@ import MuiDrawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import en from '@/lib/data/list-items/en';
-import es from '@/lib/data/list-items/es';
-import fr from '@/lib/data/list-items/fr';
-import hi from '@/lib/data/list-items/hi';
 import MainList from './MainList';
 import SecondaryList from './SecondaryList';
 
@@ -73,27 +69,12 @@ const AppBar = styled(MuiAppBar, {
 
 export default function Layout() {
   const [open, setOpen] = React.useState(false);
+  const { t } = useTranslation('layout');
+  const message = t('navMessage');
+  
   const toggleDrawer = () => {
     setOpen(!open)
   };
-  const router = useRouter();
-  const { locale } = router;
-
-  const message = locale === 'en'
-    ? 'Welcome, to your dashboard'
-    : locale === 'es'
-      ? 'Bienvenido, a tu tablero.'
-      : locale === 'fr'
-        ? 'Bienvenue à votre conseil.'
-        : locale === 'hi'
-          ? 'आपकी सलाह में आपका स्वागत है।'
-          : '';
-
-  let t = locale === 'en'
-    ? en : es === es
-      ? es : fr === fr
-        ? fr : hi === hi
-          ? hi : null;
 
   return (
     <>

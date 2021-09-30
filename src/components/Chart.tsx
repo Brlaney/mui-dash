@@ -28,18 +28,32 @@ const data = [
 ]
 
 export default function Chart({ content }) {
-  const theme = useTheme()
+  const theme = useTheme();
+  const title = content('chartTitle');
+  const label = content('chartLabel');
 
   return (
     <React.Fragment>
-      <Title>{content.chartTitle}</Title>
+      <Title>{title}</Title>
       <ResponsiveContainer>
         <LineChart
           data={data}
-          margin={{ top: 16, right: 16, bottom: 0, left: 24, }}
+          margin={{
+            top: 16,
+            right: 16,
+            bottom: 0,
+            left: 24,
+          }}
         >
-          <XAxis dataKey='time' stroke={theme.palette.text.secondary} style={theme.typography.body2} />
-          <YAxis stroke={theme.palette.text.secondary} style={theme.typography.body2}>
+          <XAxis
+            dataKey='time'
+            stroke={theme.palette.text.secondary}
+            style={theme.typography.body2}
+          />
+          <YAxis
+            stroke={theme.palette.text.secondary}
+            style={theme.typography.body2}
+          >
             <Label
               angle={270}
               position='left'
@@ -49,7 +63,7 @@ export default function Chart({ content }) {
                 ...theme.typography.body1,
               }}
             >
-              {content.chartLabel}
+              {label}
             </Label>
           </YAxis>
           <Line

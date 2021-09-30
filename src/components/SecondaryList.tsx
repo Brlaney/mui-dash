@@ -6,26 +6,31 @@ import ListSubheader from '@mui/material/ListSubheader';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
 const SecondaryList = ({ data }) => {
+  const i6 = data('item6');
+  const i7 = data('item7');
+  const i8 = data('item8');
+  const i9 = data('item9');
+
   return (
     <div>
-      <ListSubheader inset>{data.six}</ListSubheader>
+      <ListSubheader inset>{i6}</ListSubheader>
       <ListItem button>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
-        <ListItemText primary={data.seven} />
+        <ListItemText primary={i7} />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
-        <ListItemText primary={data.eight} />
+        <ListItemText primary={i8} />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
-        <ListItemText primary={data.nine} />
+        <ListItemText primary={i9} />
       </ListItem>
     </div>
   )

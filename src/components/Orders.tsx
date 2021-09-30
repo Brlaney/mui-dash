@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import useTranslation from 'next-translate/useTranslation';
 import { orders as en } from '@/lib/data/orders/en';
 import { orders as es } from '@/lib/data/orders/es';
 import { orders as fr } from '@/lib/data/orders/fr';
@@ -46,26 +47,29 @@ const columns: GridColDef[] = [
 ];
 
 const Orders = () => {
-  const router = useRouter()
-  const { locale } = router
+  let { lang } = useTranslation();
+  const [lng] = useState(lang);
+  const [data, setData] = useState([]);
+  const { t } = useTranslation('home');
+  const message = t('orderTitle');
 
-  const message = locale === 'en'
-    ? 'Recent Orders'
-    : locale === 'es'
-    ? 'órdenes recientes'
-    : locale === 'fr'
-    ? 'Dernières commandes'
-    : locale === 'hi'
-    ? 'हालिया आदेश'
-    : locale === 'zh'
-    ? '最近的订单' : null;
-
-  const t = locale === 'en'
-    ? en : es === es
-    ? es : fr === fr
-    ? fr : hi === hi
-    ? hi : zh === zh
-    ? zh : null;
+  /* The useEffect hook will match the locale with
+  the associated order data for that language.  */
+  useEffect(() => {
+    if (lng == 'en') {
+      setData(en);
+    } else if (lng == 'es') {
+      setData(es);
+    } else if (lng == 'fr') {
+      setData(fr);
+    } else if (lng == 'hi') {
+      setData(hi);
+    } else if (lng == 'zh') {
+      setData(zh);
+    } else {
+      null;
+    }
+  }, [data]);
 
   return (
     <>
@@ -78,7 +82,7 @@ const Orders = () => {
         }}
       >
         <DataGrid
-          rows={t}
+          rows={data}
           columns={columns}
           pageSize={5}
           checkboxSelection

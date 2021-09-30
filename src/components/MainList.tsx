@@ -9,37 +9,43 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 
 const MainList = ({ data }) => {
+  const i1 = data('item1');
+  const i2 = data('item2');
+  const i3 = data('item3');
+  const i4 = data('item4');
+  const i5 = data('item5');
+
   return (
     <div>
       <ListItem button>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary={data.one} />
+        <ListItemText primary={i1} />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <ShoppingCartIcon />
         </ListItemIcon>
-        <ListItemText primary={data.two} />
+        <ListItemText primary={i2} />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
-        <ListItemText primary={data.three} />
+        <ListItemText primary={i3} />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
-        <ListItemText primary={data.four} />
+        <ListItemText primary={i4} />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary={data.five} />
+        <ListItemText primary={i5} />
       </ListItem>
     </div>
   )

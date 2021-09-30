@@ -7,19 +7,24 @@ function preventDefault(event: React.MouseEvent) {
   event.preventDefault()
 };
 
-export default function Deposits({ content }) {
+export default function Deposits({ data }) {
+  const title = data('depositTitle')
+  const cost = data('depositCost')
+  const date = data('depositDate')
+  const link = data('depositLink')
+
   return (
     <>
-      <Title>{content.depositTitle}</Title>
+      <Title>{title}</Title>
       <Typography component='p' variant='h4'>
-        {content.depositCost}
+        {cost}
       </Typography>
       <Typography color='text.secondary' sx={{ flex: 1 }}>
-        {content.depositDate}
+        {date}
       </Typography>
       <div>
         <Link color='primary' href='#' onClick={preventDefault}>
-          {content.depositLink}
+          {link}
         </Link>
       </div>
     </>
