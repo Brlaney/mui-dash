@@ -92,7 +92,7 @@ function DashboardContent() {
                   flexDirection: 'column',
                   position: 'fixed',
                   bottom: 0,
-                  left: '41%'
+                  left: '47%'
                 }}
               >
                 <Copyright data={t} />

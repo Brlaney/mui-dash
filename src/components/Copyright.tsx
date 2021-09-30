@@ -9,6 +9,15 @@ import IconButton from '@mui/material/IconButton';
 import Fade from '@mui/material/Fade';
 import useTranslation from 'next-translate/useTranslation';
 
+// Add the following into it's own locale file
+const translations = [
+  { id: 1, value: 'en', translated: 'English' },
+  { id: 2, value: 'es', translated: 'Spanish' },
+  { id: 3, value: 'fr', translated: 'French' },
+  { id: 4, value: 'hi', translated: 'Hindi' },
+  { id: 5, value: 'zh', translated: 'Chinese' }
+];
+
 export default function Copyright({ data }, props: any) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);

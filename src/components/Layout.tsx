@@ -68,7 +68,7 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 export default function Layout() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const { t } = useTranslation('layout');
   const message = t('navMessage');
   
