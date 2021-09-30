@@ -4,14 +4,14 @@ import { orders as en } from '@/lib/data/orders/en';
 import { orders as es } from '@/lib/data/orders/es';
 import { orders as fr } from '@/lib/data/orders/fr';
 import { orders as hi } from '@/lib/data/orders/hi';
+import { orders as zh } from '@/lib/data/orders/zh';
 import Title from './Title';
-// import {
-//   DataGrid,
-//   GridColDef,
-//   GridValueGetterParams
-// } from '@mui/x-data-grid';
+import {
+  DataGrid,
+  GridColDef,
+  GridValueGetterParams
+} from '@mui/x-data-grid';
 
-/*
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 125 },
   { field: 'date', headerName: 'Date', width: 150 },
@@ -44,7 +44,6 @@ const columns: GridColDef[] = [
   },
   { field: 'cost', headerName: 'Cost', width: 180 },
 ];
-*/
 
 const Orders = () => {
   const router = useRouter()
@@ -53,18 +52,20 @@ const Orders = () => {
   const message = locale === 'en'
     ? 'Recent Orders'
     : locale === 'es'
-      ? 'órdenes recientes'
-      : locale === 'fr'
-        ? 'Dernières commandes'
-        : locale === 'hi'
-          ? 'हालिया आदेश'
-          : '';
-  
+    ? 'órdenes recientes'
+    : locale === 'fr'
+    ? 'Dernières commandes'
+    : locale === 'hi'
+    ? 'हालिया आदेश'
+    : locale === 'zh'
+    ? '最近的订单' : null;
+
   const t = locale === 'en'
     ? en : es === es
-      ? es : fr === fr
-        ? fr : hi === hi
-          ? hi : en;
+    ? es : fr === fr
+    ? fr : hi === hi
+    ? hi : zh === zh
+    ? zh : null;
 
   return (
     <>
@@ -76,13 +77,12 @@ const Orders = () => {
           paddingBottom: '25px'
         }}
       >
-        DATA HERE
-        {/* <DataGrid
+        <DataGrid
           rows={t}
           columns={columns}
           pageSize={5}
           checkboxSelection
-        /> */}
+        />
       </div>
     </>
   )

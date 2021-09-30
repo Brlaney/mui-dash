@@ -1,0 +1,20 @@
+{
+  "one": "Tableau de bord",
+  "two": "Ordres",
+  "three": "Les clients",
+  "four": "Rapports",
+  "five": "Intégration",
+  "six": "Rapports enregistrés",
+  "seven": "Mois en cours",
+  "eight": "Dernier quart",
+  "nine": "Vente de fin d'année",
+  "chartTitle": "Aujourd'hui",
+  "chartLabel": "Ventes ($)",
+  "copyright": "droits d'auteur",
+  "copyrightLink": "Mui-time",
+  "depositTitle": "Dépôts récents",
+  "depositCost": "$3,024.00",
+  "depositDate": "Le 15 mars 2019",
+  "depositLink": "Vue de l'équilibre",
+  "orderTitle": "Dernières commandes"
+}

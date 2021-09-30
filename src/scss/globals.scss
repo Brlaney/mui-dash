@@ -31,3 +31,15 @@ a {
   background-color: $c-primary;
   outline: 1px solid slategrey;
 }
+
+.bottomfooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+#language-selection-menu {
+  margin: 0 0 0.2rem 0.2rem;
+}

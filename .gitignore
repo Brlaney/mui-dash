@@ -11,6 +11,9 @@
 # Dependency directories
 node_modules/
 
+# Project summary extension directory
+/.VSCodeCounter
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

@@ -5,25 +5,19 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import en from '@/lib/data/content/en';
-import es from '@/lib/data/content/es';
-import fr from '@/lib/data/content/fr';
-import hi from '@/lib/data/content/hi';
 import Chart from '@/components/Chart';
 import Copyright from '@/components/Copyright';
 import Deposits from '@/components/Deposits';
 import Layout from '@/components/Layout';
 import Orders from '@/components/Orders';
+import useTranslation from 'next-translate/useTranslation';
 
 function DashboardContent() {
   const router = useRouter();
   const { locale } = router;
+  let { t } = useTranslation();
 
-  let t = locale === 'en'
-    ? en : es === es
-      ? es : fr === fr
-        ? fr : hi === hi
-          ? hi : null;
+  console.log(t);
 
   return (
     <Box sx={{ display: 'flex' }}>

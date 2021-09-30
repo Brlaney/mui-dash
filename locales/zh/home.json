@@ -1,0 +1,20 @@
+{
+  "one": "仪表盘",
+  "two": "订单",
+  "three": "顾客",
+  "four": "举报",
+  "five": "一体化",
+  "six": "保存的报告",
+  "seven": "这个月",
+  "eight": "上一季度",
+  "nine": "年末销售",
+  "chartTitle": "今天",
+  "chartLabel": "销售（$）",
+  "copyright": "版权",
+  "copyrightLink": "兜帽-短跑",
+  "depositTitle": "最近的存款",
+  "depositCost": "$3,024.00",
+  "depositDate": "2019年3月15日",
+  "depositLink": "查看余额",
+  "orderTitle": "最近的订单"
+}
