@@ -89,11 +89,11 @@ export default function Layout() {
           ? 'आपकी सलाह में आपका स्वागत है।'
           : '';
 
-  const t = locale === 'en'
+  let t = locale === 'en'
     ? en : es === es
       ? es : fr === fr
         ? fr : hi === hi
-          ? hi : en;
+          ? hi : null;
 
   return (
     <>

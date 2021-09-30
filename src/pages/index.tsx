@@ -19,13 +19,11 @@ function DashboardContent() {
   const router = useRouter();
   const { locale } = router;
 
-  console.log(locale);
-
-  const t = locale === 'en'
+  let t = locale === 'en'
     ? en : es === es
       ? es : fr === fr
         ? fr : hi === hi
-          ? hi : en;
+          ? hi : null;
 
   return (
     <Box sx={{ display: 'flex' }}>

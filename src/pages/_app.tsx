@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -26,13 +26,13 @@ export default function MyApp(props: MyAppProps) {
   } = props;
   const router = useRouter();
   const { locale } = router;
-  
-  const t = locale === 'en'
+
+  let t = locale === 'en'
     ? en : es === es
       ? es : fr === fr
         ? fr : hi === hi
           ? hi : en;
-  
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
