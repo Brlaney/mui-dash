@@ -40,14 +40,14 @@
   - Hindi (hi) - **figure 4.**
   - Chinese (simplified) (zh) - **figure 5.**
 - 🌐 The 3rd-party package **next-translate** was used to simplify each locales import - [next-translate's repository](https://github.com/vinissimus/next-translate)
-- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://mui.com/getting-started/templates/dashboard/).
+- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/.material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://mui.com/getting-started/templates/dashboard/).
 
 </br>
 
 <table>
   <thead><tr>
-    <th>English, en - <b>figure 1.</b></th>
-    <th>Spanish, es - <b>figure 2.</b></th>
+    <th>English, en - figure 1.</th>
+    <th>Spanish, es - figure 2.</th>
   </tr></thead>
   <tbody><tr>
     <td><img src="https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png" alt="English" style="width: 250px;"/></td>
@@ -57,15 +57,15 @@
     <td><img src="https://user-images.githubusercontent.com/64326462/128283628-64db2bd5-7bd3-41ca-8b85-9ef44445755b.PNG" alt="हिंदी" style="width: 250px;"/></td>
   </tr></tbody>
   <tr>
-    <th>French, fr - <b>figure 3.</b></th>
-    <th>Hindi, hi - <b>figure 4.</b></th>
+    <th>French, fr - figure 3.</th>
+    <th>Hindi, hi - figure 4.</th>
   </tr>
 </table>
 
 </br>
 
 <div align="center">
-  <h4>Chinese (simplified), zh - <b>figure 5.</b></h4>
+  <h4>Chinese (simplified), zh - figure 5.</h4>
   <img src="https://user-images.githubusercontent.com/64326462/135328653-a190919c-c149-4775-8b3b-1c664bb4c018.png" alt="中国人"  width="250" align="center" />
 </div>
 
