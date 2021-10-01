@@ -1,0 +1,14 @@
+"use strict";
+(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["locales_hi_layout_json"],{
+
+/***/ "./locales/hi/layout.json":
+/*!********************************!*\
+  !*** ./locales/hi/layout.json ***!
+  \********************************/
+/***/ (function(module) {
+
+module.exports = JSON.parse('{"navMessage":"आपकी सलाह में आपका स्वागत है।","item1":"डैशबोर्ड","item2":"आदेश","item3":"ग्राहकों","item4":"रिपोर्टों","item5":"एकीकरण","item6":"सहेजी गई रिपोर्ट","item7":"वर्तमान माह","item8":"अंतिम चौथाई","item9":"साल-अंत बिक्री"}');
+
+/***/ })
+
+}]);

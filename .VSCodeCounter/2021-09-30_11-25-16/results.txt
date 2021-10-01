@@ -1,0 +1,68 @@
+Date : 2021-09-30 11:25:16
+Directory : c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src
+Total : 30 files,  2554 codes, 2 comments, 107 blanks, all 2663 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| TypeScript       |         16 |      1,806 |          0 |         28 |      1,834 |
+| TypeScript React |         11 |        674 |          2 |         64 |        740 |
+| SCSS             |          3 |         74 |          0 |         15 |         89 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                   | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                      |         30 |      2,554 |          2 |        107 |      2,663 |
+| components                                                                                             |          8 |        493 |          1 |         39 |        533 |
+| lib                                                                                                    |         16 |      1,806 |          0 |         28 |      1,834 |
+| lib\config                                                                                             |          3 |         57 |          0 |         10 |         67 |
+| lib\config\cache                                                                                       |          1 |          4 |          0 |          2 |          6 |
+| lib\config\mui-theme                                                                                   |          1 |         38 |          0 |          5 |         43 |
+| lib\config\types                                                                                       |          1 |         15 |          0 |          3 |         18 |
+| lib\data                                                                                               |         13 |      1,749 |          0 |         18 |      1,767 |
+| lib\data\content                                                                                       |          4 |         40 |          0 |          4 |         44 |
+| lib\data\list-items                                                                                    |          4 |         44 |          0 |          4 |         48 |
+| lib\data\orders                                                                                        |          5 |      1,665 |          0 |         10 |      1,675 |
+| pages                                                                                                  |          3 |        181 |          1 |         25 |        207 |
+| scss                                                                                                   |          3 |         74 |          0 |         15 |         89 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                               | language         | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\Chart.tsx                   | TypeScript React |         61 |          1 |          5 |         67 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\Copyright.tsx               | TypeScript React |         77 |          0 |          5 |         82 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\Deposits.tsx                | TypeScript React |         25 |          0 |          3 |         28 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\Layout.tsx                  | TypeScript React |        150 |          0 |         10 |        160 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\MainList.tsx                | TypeScript React |         46 |          0 |          3 |         49 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\Orders.tsx                  | TypeScript React |         85 |          0 |          7 |         92 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\SecondaryList.tsx           | TypeScript React |         32 |          0 |          3 |         35 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\components\Title.tsx                   | TypeScript React |         17 |          0 |          3 |         20 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\config\cache\createEmotionCache.ts | TypeScript       |          4 |          0 |          2 |          6 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\config\mui-theme\theme.ts          | TypeScript       |         38 |          0 |          5 |         43 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\config\types\index.ts              | TypeScript       |         15 |          0 |          3 |         18 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\content\en.ts                 | TypeScript       |         10 |          0 |          1 |         11 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\content\es.ts                 | TypeScript       |         10 |          0 |          1 |         11 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\content\fr.ts                 | TypeScript       |         10 |          0 |          1 |         11 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\content\hi.ts                 | TypeScript       |         10 |          0 |          1 |         11 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\list-items\en.ts              | TypeScript       |         11 |          0 |          1 |         12 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\list-items\es.ts              | TypeScript       |         11 |          0 |          1 |         12 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\list-items\fr.ts              | TypeScript       |         11 |          0 |          1 |         12 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\list-items\hi.ts              | TypeScript       |         11 |          0 |          1 |         12 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\orders\en.ts                  | TypeScript       |        333 |          0 |          2 |        335 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\orders\es.ts                  | TypeScript       |        333 |          0 |          2 |        335 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\orders\fr.ts                  | TypeScript       |        333 |          0 |          2 |        335 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\orders\hi.ts                  | TypeScript       |        333 |          0 |          2 |        335 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\lib\data\orders\zh.ts                  | TypeScript       |        333 |          0 |          2 |        335 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\pages\_app.tsx                         | TypeScript React |         42 |          0 |          6 |         48 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\pages\_document.tsx                    | TypeScript React |         39 |          1 |          7 |         47 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\pages\index.tsx                        | TypeScript React |        100 |          0 |         12 |        112 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\scss\Home.module.scss                  | SCSS             |         16 |          0 |          3 |         19 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\scss\globals.scss                      | SCSS             |         37 |          0 |          9 |         46 |
+| c:\Users\Brlan\Documents\Coding\Portfolio\projects\mui-dash\src\scss\themes.scss                       | SCSS             |         21 |          0 |          3 |         24 |
+| Total                                                                                                  |                  |      2,554 |          2 |        107 |      2,663 |
++--------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
