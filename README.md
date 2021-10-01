@@ -32,11 +32,11 @@
 
 - 🌎 Implements Next's [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing) for multi-language support.
 - Currently supported locales include (see figures below):
-  - English (en) - **figure 1.**
-  - Spanish (es) - **figure 2.**
-  - French (fr) - **figure 3.**
-  - Hindi (hi) - **figure 4.**
-  - Chinese (simplified) (zh) - **figure 5.**
+  - :america: English (en) - **figure 1.**
+  - :mexico: Spanish (es) - **figure 2.**
+  - :france: French (fr) - **figure 3.**
+  - :india: Hindi (hi) - **figure 4.**
+  - :china: Chinese (simplified) (zh) - **figure 5.**
 - 🌐 The 3rd-party package **next-translate** was used to simplify each locales import - [next-translate's repository](https://github.com/vinissimus/next-translate)
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/.material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://mui.com/getting-started/templates/dashboard/).
 
