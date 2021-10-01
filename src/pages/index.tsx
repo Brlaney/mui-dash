@@ -9,6 +9,7 @@ import Copyright from '@/components/Copyright';
 import Deposits from '@/components/Deposits';
 import Layout from '@/components/Layout';
 import Orders from '@/components/Orders';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 import useTranslation from 'next-translate/useTranslation';
 
 function DashboardContent() {
@@ -84,16 +85,17 @@ function DashboardContent() {
           </Grid>
 
           {/* Copyright component (footer) */}
-          <Grid container spacing={3} sx={{ marginTop: '0.7rem' }}>
-            <Grid item xs={12}>
+          <Grid
+            container
+            // spacing={3}
+            sx={{ height: '50px', marginTop: '0.7rem' }}>
+            <Grid item xs={12} sx={{ paddingBottom: 0 }}>
               <Box
                 sx={{
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
-                  bottom: 0,
-                  // left: '47%'
                 }}
               >
                 <Copyright data={t} />

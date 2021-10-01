@@ -50,7 +50,7 @@ export default function Copyright({ data }, props: any) {
         <Typography
           className='text'
           variant='body2'
-          color='text.secondary'
+          color='inherit'
           align='center'
           {...props}
         >{name}{' '}
@@ -75,7 +75,7 @@ export default function Copyright({ data }, props: any) {
             aria-expanded={open ? 'true' : undefined}
             onClick={handleClick}
           >
-            <LanguageIcon />
+            <LanguageIcon sx={{ fontSize: '1.4rem' }} />
           </IconButton>
         </Tooltip>
         <Menu

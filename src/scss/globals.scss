@@ -38,6 +38,17 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  .text {
+    color: slategrey;
+    a {
+      color: $c-secondary;
+    }
+  }
+  p {
+    a {
+      color: $c-secondary;
+    }
+  }
 }
 
 #language-selection-menu {
