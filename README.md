@@ -32,11 +32,14 @@
 
 - 🌎 Implements Next's [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing) for multi-language support.
 - Currently supported locales include (see figures below):
-  - English (en) - **figure 1.**
-  - Spanish (es) - **figure 2.**
-  - French (fr) - **figure 3.**
-  - Hindi (hi) - **figure 4.**
-  - Chinese (simplified) (zh) - **figure 5.**
+  - English to Spanish **figure 1.**
+  - French to Hindi **figure 2.**
+  - Chinese back to English **figure 3.**
+  - English (en) - **figure 4.**
+  - Spanish (es) - **figure 5.**
+  - French (fr) - **figure 6.**
+  - Hindi (hi) - **figure 7.**
+  - Chinese (simplified) (zh) - **figure 8.**
 - 🌐 The 3rd-party package **next-translate** was used to simplify each locales import - [next-translate's repository](https://github.com/vinissimus/next-translate)
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/.material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://mui.com/getting-started/templates/dashboard/).
 
@@ -44,7 +47,31 @@
 </br>
 
 <div align="center">
-  <h4>English, en - figure 1.</h4>
+  <h4>English and Spanish - figure 1.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135653901-175348bc-dca4-43f3-8272-f685c19a37b5.gif" alt="en-es"  align="center" />
+</div>
+
+</br>
+</br>
+
+<div align="center">
+  <h4>French and Hindi - figure 2.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135653904-86fc9c03-3e71-4617-b405-9ea584a69ee0.gif" alt="fr-hi"  align="center" />
+</div>
+
+</br>
+</br>
+
+<div align="center">
+  <h4>Chinese and back to English - figure 3.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135653905-d53b4e6a-6697-4139-bebe-2bad9f460533.gif" alt="zh-en"  align="center" />
+</div>
+
+</br>
+</br>
+
+<div align="center">
+  <h4>English, en - figure 4.</h4>
   <img src="https://user-images.githubusercontent.com/64326462/135640665-0facac18-1584-4cfd-899e-449bad0f3db8.png" alt="english-locale"  align="center" />
 </div>
 
@@ -52,7 +79,7 @@
 </br>
 
 <div align="center">
-  <h4>Spanish, es - figure 2.</h4>
+  <h4>Spanish, es - figure 5.</h4>
   <img src="https://user-images.githubusercontent.com/64326462/135640660-0bc5a345-0223-43fa-a837-6ea977eb34c3.png" alt="spanish-locale"  align="center" />
 </div>
 
@@ -60,7 +87,7 @@
 </br>
 
 <div align="center">
-  <h4>French, fr - figure 3.</h4>
+  <h4>French, fr - figure 6.</h4>
   <img src="https://user-images.githubusercontent.com/64326462/135640661-e62d3c04-3fb7-400b-b922-fdeede170e7e.png" alt="french-locale"  align="center" />
 </div>
 
@@ -68,7 +95,7 @@
 </br>
 
 <div align="center">
-  <h4>Hindi, hi - figure 4.</h4>
+  <h4>Hindi, hi - figure 7.</h4>
   <img src="https://user-images.githubusercontent.com/64326462/135640663-45322286-c910-4d52-a4e8-d58b4800346e.png" alt="hindi-locale"  align="center" />
 </div>
 
@@ -76,7 +103,7 @@
 </br>
 
 <div align="center">
-  <h4>Chinese (simplified), zh - figure 5.</h4>
+  <h4>Chinese (simplified), zh - figure 8.</h4>
   <img src="https://user-images.githubusercontent.com/64326462/135640664-47600f2f-923d-4419-b069-206eb46ba945.png" alt="chinese-locale"  align="center" />
 </div>
 

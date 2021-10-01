@@ -94,8 +94,12 @@ function DashboardContent() {
                 sx={{
                   p: 2,
                   display: 'flex',
+                  width: '55%',
                   flexDirection: 'column',
-                  position: 'relative',
+                  position: 'absolute',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bottom: 0
                 }}
               >
                 <Copyright data={t} />
