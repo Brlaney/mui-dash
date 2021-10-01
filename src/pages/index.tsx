@@ -9,7 +9,6 @@ import Copyright from '@/components/Copyright';
 import Deposits from '@/components/Deposits';
 import Layout from '@/components/Layout';
 import Orders from '@/components/Orders';
-import CopyrightIcon from '@mui/icons-material/Copyright';
 import useTranslation from 'next-translate/useTranslation';
 
 function DashboardContent() {
