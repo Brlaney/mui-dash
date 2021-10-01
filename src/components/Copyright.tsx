@@ -6,16 +6,17 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import LanguageIcon from '@mui/icons-material/Language';
 import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
 import useTranslation from 'next-translate/useTranslation';
 
 // Add the following into it's own locale file
 const translations = [
-  { id: 1, value: 'en', translated: 'English' },
-  { id: 2, value: 'es', translated: 'Spanish' },
-  { id: 3, value: 'fr', translated: 'French' },
-  { id: 4, value: 'hi', translated: 'Hindi' },
-  { id: 5, value: 'zh', translated: 'Chinese' }
+  'English',
+  'Spanish',
+  'French',
+  'Hindi',
+  'Chinese'
 ];
 
 export default function Copyright({ data }, props: any) {
@@ -59,44 +60,52 @@ export default function Copyright({ data }, props: any) {
           {new Date().getFullYear()}
           {'.'}
         </Typography>
-        <IconButton
-          className='languageMenu'
-          color='primary'
-          id='language-selection-menu'
-          aria-controls='language-selection-menu'
-          aria-haspopup='true'
-          aria-expanded={open ? 'true' : undefined}
-          onClick={handleClick}
+        <Tooltip
+          title='Select a language'
+          enterDelay={350}
+          leaveDelay={200}
+          arrow
         >
-          <LanguageIcon />
-        </IconButton>
+          <IconButton
+            className='languageMenu'
+            color='primary'
+            id='language-selection-menu'
+            aria-controls='language-selection-menu'
+            aria-haspopup='true'
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+          >
+            <LanguageIcon />
+          </IconButton>
+        </Tooltip>
         <Menu
           id='language-selection-menu'
           aria-labelledby='language-selection-menu'
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
-          MenuListProps={{
-            'aria-labelledby': 'fade-button',
-          }}
+          elevation={2}
           anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
+            vertical: 'bottom',
+            horizontal: 'right',
           }}
           transformOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
+            vertical: 'bottom',
+            horizontal: 'right',
           }}
           TransitionComponent={Fade}
         >
-          {router.locales.map((locale) => (
+          {router.locales.map((locale, index) => (
             <Link
-              key={locale}
+              key={index}
               locale={locale}
               href={router.asPath}
             >
-              <MenuItem onClick={handleClose}>
-                {locale}
+              <MenuItem
+                onClick={handleClose}
+                sx={{ width: '200px', justifyContent: 'center' }}
+              >
+                {translations[index]}
               </MenuItem>
             </Link>
           ))}

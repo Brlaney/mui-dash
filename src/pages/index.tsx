@@ -21,7 +21,7 @@ function DashboardContent() {
   }, [lng]);
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box className='main' sx={{ display: 'flex' }}>
 
       {/* Navbar & Sidebar component */}
       <Layout />
@@ -32,6 +32,7 @@ function DashboardContent() {
             ? theme.palette.grey[100]
             : theme.palette.grey[900],
           flexGrow: 1,
+          width: '100vw',
           height: '100vh',
           overflow: 'auto',
         }}
@@ -83,16 +84,16 @@ function DashboardContent() {
           </Grid>
 
           {/* Copyright component (footer) */}
-          <Grid container spacing={3}>
+          <Grid container spacing={3} sx={{ marginTop: '0.7rem' }}>
             <Grid item xs={12}>
               <Box
                 sx={{
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
-                  position: 'fixed',
+                  position: 'relative',
                   bottom: 0,
-                  left: '47%'
+                  // left: '47%'
                 }}
               >
                 <Copyright data={t} />
