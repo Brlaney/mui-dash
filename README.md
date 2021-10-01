@@ -41,30 +41,43 @@
 - ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/.material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://mui.com/getting-started/templates/dashboard/).
 
 </br>
+</br>
 
-<table>
-  <thead><tr>
-    <th>English, en - figure 1.</th>
-    <th>Spanish, es - figure 2.</th>
-  </tr></thead>
-  <tbody><tr>
-    <td><img src="https://user-images.githubusercontent.com/64326462/128269197-38bb9999-6b3d-47de-95e8-a17654e76927.png" alt="English" style="width: 250px;"/></td>
-    <td><img src="https://user-images.githubusercontent.com/64326462/128269274-f3da4133-e84c-495a-809a-b76042fd9fb9.png" alt="Espanol" style="width: 250px;"/></td>
-  </tr><tr>
-    <td><img src="https://user-images.githubusercontent.com/64326462/128283625-d06acf30-761b-4454-8d2a-2dd7b2b4806c.PNG" alt="français" style="width: 250px;"/></td>
-    <td><img src="https://user-images.githubusercontent.com/64326462/128283628-64db2bd5-7bd3-41ca-8b85-9ef44445755b.PNG" alt="हिंदी" style="width: 250px;"/></td>
-  </tr></tbody>
-  <tr>
-    <th>French, fr - figure 3.</th>
-    <th>Hindi, hi - figure 4.</th>
-  </tr>
-</table>
+<div align="center">
+  <h4>English, en - figure 1.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135559736-62361d97-0655-4424-8031-dacf1957632a.png" alt="english-locale"  align="center" />
+</div>
 
+</br>
+</br>
+
+<div align="center">
+  <h4>Spanish, es - figure 2.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135559734-27f858ac-210f-48b4-8b8d-691f70c2adeb.png" alt="spanish-locale"  align="center" />
+</div>
+
+</br>
+</br>
+
+<div align="center">
+  <h4>French, fr - figure 3.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135559733-877770f3-2132-484a-8013-012b9274a300.png" alt="french-locale"  align="center" />
+</div>
+
+</br>
+</br>
+
+<div align="center">
+  <h4>Hindi, hi - figure 4.</h4>
+  <img src="https://user-images.githubusercontent.com/64326462/135559732-0ad90967-25df-477a-97f4-5ac5ca297988.png" alt="hindi-locale"  align="center" />
+</div>
+
+</br>
 </br>
 
 <div align="center">
   <h4>Chinese (simplified), zh - figure 5.</h4>
-  <img src="https://user-images.githubusercontent.com/64326462/135328653-a190919c-c149-4775-8b3b-1c664bb4c018.png" alt="中国人"  width="250" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/135559730-4cf06495-9690-4903-926b-9877bd55842a.png" alt="chinese-locale"  align="center" />
 </div>
 
 </br>
