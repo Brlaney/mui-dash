@@ -82,15 +82,15 @@ const Orders = () => {
       <Title>{message}</Title>
       <div
         style={{
-          height: 400,
+          height: 340,
           width: '100%',
-          paddingBottom: '25px'
         }}
       >
         <DataGrid
           rows={data}
           columns={columns}
           pageSize={5}
+          rowHeight={44}
           checkboxSelection
         />
       </div>

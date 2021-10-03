@@ -42,7 +42,7 @@ function DashboardContent() {
           <Grid container spacing={3}>
 
             {/* Chart component */}
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs={12} sm={8} md={8} lg={9}>
               <Paper
                 sx={{
                   p: 2,
@@ -56,13 +56,14 @@ function DashboardContent() {
             </Grid>
 
             {/* Deposits component */}
-            <Grid item xs={12} md={4} lg={3}>
+            <Grid item xs={12} sm={4} md={4} lg={3}>
               <Paper
                 sx={{
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
                   height: 240,
+                  textAlign: 'justify'
                 }}
               >
                 <Deposits data={t} />
@@ -84,21 +85,15 @@ function DashboardContent() {
           </Grid>
 
           {/* Copyright component (footer) */}
-          <Grid
-            container
-            // spacing={3}
-            sx={{ height: '50px', marginTop: '0.7rem' }}>
+          <Grid container sx={{ height: '100%', marginTop: '1rem' }}>
             <Grid item xs={12} sx={{ paddingBottom: 0 }}>
               <Box
                 sx={{
-                  p: 2,
+                  pt: 3,
                   display: 'flex',
-                  width: '55%',
-                  flexDirection: 'column',
-                  position: 'absolute',
-                  alignItems: 'center',
+                  width: '100%',
+                  position: 'relative',
                   justifyContent: 'center',
-                  bottom: 0
                 }}
               >
                 <Copyright data={t} />

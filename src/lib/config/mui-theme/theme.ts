@@ -15,6 +15,9 @@ let theme = createTheme({
     success: { main: '#16ff4c' },
     background: { default: '#FDFFFC' }
   },
+  breakpoints: {
+    values: { xs: 600, sm: 800, md: 1000, lg: 1200, xl: 1536, }
+  },
   typography: {
     fontFamily: font,
     h1: { fontSize: 62 },
