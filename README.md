@@ -150,20 +150,31 @@ In this section I will sumarize my problem solving process for any issues that a
 
 ## Project code summary
 
-- **Date updated:** `10-03-2021`
+- **Date updated:** `09-30-2021`
 - **First commit:** `08-20-2021`
 - **Directory:** `\mui-dash\src`
-- **Total additions:** 
-  - `20 files added`
-  - `1,991 lines of code added`
-  - **Sum total** `1,991 lines of code added`
+- **Totals:** 
+  - `30 files`
+  - `2554 lines of code`
+  - `2 comments` 
+  - `107 blanks`
+  - **Sum total** `2,663 lines`
 
 ### Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| TypeScript | 15 | 1,741 | 0 | 23 | 1,764 |
-| TypeScript React | 2 | 180 | -1 | 20 | 199 |
-| SCSS | 3 | 23 | 0 | 5 | 28 |
+| TypeScript | 16 | 1,806 | 0 | 28 | 1,834 |
+| TypeScript React | 11 | 674 | 2 | 64 | 740 |
+| SCSS | 3 | 74 | 0 | 15 | 89 |
+
+### Directories
+| path | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| src/ | 30 | 2,554 | 2 | 107 | 2,663 |
+| src/components | 8 | 493 | 1 | 39 | 533 |
+| src/lib | 16 | 1,806 | 0 | 28 | 1,834 |
+| src/pages | 3 | 181 | 1 | 25 | 207 |
+| src/scss | 3 | 74 | 0 | 15 | 89 |
 
 </br>
 
